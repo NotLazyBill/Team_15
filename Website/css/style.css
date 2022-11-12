@@ -15,6 +15,10 @@ h2 {
   text-align: center;
 }
 
+.title{
+  text-align: center;
+}
+
 .topnav {
   background-color: rgb(66, 66, 66);
   overflow: hidden;
@@ -41,6 +45,29 @@ h2 {
   padding: 15px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.topnav-right {
+  float: right;
+  padding: 10px;
+}
+
+#topnav-centered {
+  text-align: center;
+  padding-top: 10px;
+}
+#topnav-centered ul {
+  display: inline-block;
+  list-style: none;
+}
+
+#topnav-centered li {
+  display: inline;
+}
+#topnav-centered a {
+  float: left;
+  text-decoration: none;
+  padding: 5px 40px;
 }
 
 .topnav a:hover {
@@ -160,4 +187,5 @@ h2 {
     text-align: center;
   }
 }
+
 
