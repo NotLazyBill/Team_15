@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300&display=swap');
+
+:root {
+  --depth: 30px;
+  --perspective: 1000px;
+}
+
+#product-list {
+  margin-top: 60px;
+  width: 98%;
+  display: grid;
+    position: relative;
+  grid-auto-flow: dense; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 8vw;
+  grid-gap: 50px;
+  perspective: var(--perspective);
+  perspective-origin: 50% 50%;
+}
+
+#product-list li {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(0px + var(--depth)));
+  border: 1px #1D3557 solid;
+  grid-row: span 5;
+}
+
+#product-list li::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: rgba(168, 218, 220, 0.2);
+  background-color: rgba(138, 179, 181, 0.2);
+  background-color: rgba(29, 53, 87, 0.2);
+}
+
+#product-list img {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 80%;
+  transform: translateY(-50%) translateZ(calc(0px - (var(--depth)/2)));
+  -webkit-filter: drop-shadow(0 50px 50px  rgba(0, 0, 0, 0.10));
+  filter: drop-shadow(0 50px 50px rgba(0, 0, 0, 0.30));
+}
+
+#product-list .expand {
+  left: 0%;
+  width: 100%;
+}
+
+#product-list .shrink {
+  left: 15%;
+  width: 70%;  
+}
+
+#product-list .size1 {
+    grid-row: span 5; 
+}
+
+#product-list .size2 {
+    grid-row: span 6; 
+}
+
+#product-list .size3 {
+    grid-row: span 7; 
+}
+
+#product-list .size4 {
+    grid-row: span 8; 
+}
+
+#product-list h2 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1em;
+  color: #444545;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#product-list .price {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: #444545;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+@media (min-width:565px) { 
+  #product-list {
+    grid-auto-rows: 6vw;
+  }
+}
+
+@media (min-width:815px) { 
+  body{
+    margin: 50px;
+  }
+  #product-list {
+    grid-auto-rows: 20px;
+    grid-gap: 50px;
+  }
+}
