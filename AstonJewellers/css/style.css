@@ -221,3 +221,49 @@ h2 {
   flex-wrap: wrap;
   margin: 0 auto; 
 }
+
+.basket{
+  margin: 80px auto;
+  width: 1000px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+img{
+  width: 200px;
+  height: 200px
+}
+
+th{
+  background-color: lightgrey;
+  font-size: 20px;
+}
+
+td{
+  padding: 10px 5px;
+  font-size: 20px;
+}
+
+td input{
+  width: 30px;
+  height: 30px;
+}
+
+.total-price{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table{
+  border-top: 2px solid black;
+  max-width: 500px;
+  width: 100%;
+}
+.order-btn{
+  display: flex;
+  justify-content: flex-end;
+  width: 1000px;
+}
