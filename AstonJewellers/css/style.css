@@ -323,7 +323,7 @@ img{
   display: block;
 }
 
-p{
+.content p{
   text-align: center;
   color: #b2bec3;
   padding-top:0 8px;
@@ -354,6 +354,24 @@ h6{
   background: #ff1aff;
 }
 
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn{
+  margin-left: 10px;
+}
+
+.image{
+  padding: 10px;
+}
+
 @media(max-width:1000px){
   .content{
       width: 45px;
@@ -365,3 +383,4 @@ h6{
       width: 45px;
   }
 }
+
