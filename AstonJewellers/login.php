@@ -29,16 +29,16 @@
             </div>
             <nav>
                 <div class="topnav-right">
-                    <a href="#"><i class="fa fa-heart-o"></i></a>
-                    <a href="basket.html"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="wishlist.php"><i class="fa fa-heart-o"></i></a>
+                    <a href="basket.php"><i class="fa fa-shopping-cart"></i></a>
                 </div>
                 <div id="topnav-centered">
                     <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="shop.php">Shop</a></li>
                         <li><a href="#">Men's</a></li>
-                        <li><a href="#">Sale</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="sales.php">Sale</a></li>
+                        <li><a href="about-us.php">About Us</a></li>
                     </ul>
                 </div>
             </nav>

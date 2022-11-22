@@ -20,35 +20,38 @@ if (isset($_GET['product'])) {
 </head>
 
 <body>
-  <header id="main-header">
-    <div class="topnav" id="nav">
-      <a href="#"><i class="fa fa-search"></i> Search</a>
-      <a href="#"><i class="fas fa-shipping-fast"></i> Shipping & Delivery info</a>
-      <div class="topnav-right">
-        <a href="#"><i class="fas fa-user-circle"></i> Log In</a>
+<header id="main-header">
+      <div class="topnav" id="nav">
+        <div class="container-fluid">
+          <div>
+            <a href="#"><i class="fa fa-search"></i> Search</a>
+          </div>
+          <div>
+            <h1>Aston Jewellers</h1>
+            <p>Selling high-quality affordable jewellery</p>
+          </div>
+          <div class="topnav-right">
+            <a href="login.php"><i class="fas fa-user-circle"></i> Log In</a>
+           
+          </div>
+        </div>
+        <nav>
+          <div class="topnav-right">
+            <a href="wishlist.php"><i class="fa fa-heart-o"></i></a>
+            <a href="basket.php"><i class="fa fa-shopping-cart"></i></a>
+          </div>
+          <div id="topnav-centered">
+            <ul>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="shop.php">Shop</a></li>
+              <li><a href="#">Men's</a></li>
+              <li><a href="sales.php">Sale</a></li>
+              <li><a href="about-us.php">About Us</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <br /><br /><br />
-      <h1>Aston Jewellers</h1>
-      <p>Selling high-quality affordable jewellery</p>
-
-      <nav>
-        <div class="topnav-right">
-          <a href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-          <a href="basket.html"><i class="fa fa-shopping-cart"></i></a>
-        </div>
-        <div id="topnav-centered">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.php">Shop</a></li>
-            <li><a href="mens.html">Men's</a></li>
-            <li><a href="#">Bestsellers</a></li>
-            <li><a href="sales.html">Sale</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
+    </header>
 
   <!-- Show store categories when no product is selected (default) -->
   <?php if (!isset($_GET['product'])) { ?>
@@ -467,3 +470,7 @@ if (isset($_GET['product'])) {
 
 </body>
 </html>
+
+<?php
+include('footer.php');
+?>

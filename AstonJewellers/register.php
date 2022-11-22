@@ -12,37 +12,37 @@
 </head>
 
 <body>
-    <header id="main-header">
-        <div class="topnav" id="nav">
-            <div class="container-fluid">
-                <div>
-                    <a href="#"><i class="fa fa-search"></i> Search</a>
-                </div>
-                <div>
-                    <h1>Aston Jewellers</h1>
-                    <p>Selling high-quality affordable jewellery</p>
-                </div>
-                <div class="topnav-right">
-                    <a href="login.php"><i class="fas fa-user-circle"></i> Log In</a>
-
-                </div>
-            </div>
-            <nav>
-                <div class="topnav-right">
-                    <a href="#"><i class="fa fa-heart-o"></i></a>
-                    <a href="basket.html"><i class="fa fa-shopping-cart"></i></a>
-                </div>
-                <div id="topnav-centered">
-                    <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="shop.php">Shop</a></li>
-                        <li><a href="#">Men's</a></li>
-                        <li><a href="#">Sale</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                    </ul>
-                </div>
-            </nav>
+<header id="main-header">
+      <div class="topnav" id="nav">
+        <div class="container-fluid">
+          <div>
+            <a href="#"><i class="fa fa-search"></i> Search</a>
+          </div>
+          <div>
+            <h1>Aston Jewellers</h1>
+            <p>Selling high-quality affordable jewellery</p>
+          </div>
+          <div class="topnav-right">
+            <a href="login.php"><i class="fas fa-user-circle"></i> Log In</a>
+           
+          </div>
         </div>
+        <nav>
+          <div class="topnav-right">
+            <a href="wishlist.php"><i class="fa fa-heart-o"></i></a>
+            <a href="basket.php"><i class="fa fa-shopping-cart"></i></a>
+          </div>
+          <div id="topnav-centered">
+            <ul>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="shop.php">Shop</a></li>
+              <li><a href="#">Men's</a></li>
+              <li><a href="sales.php">Sale</a></li>
+              <li><a href="about-us.php">About Us</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <div class="register">
