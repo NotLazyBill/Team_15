@@ -147,18 +147,3 @@ h3+p {
   color: black;
   border-radius: 10%;
 }
-
-.footer {
-  text-align: center;
-  color: white;
-  background-color: rgb(66, 66, 66);
-  padding: 10px;
-}
-
-.register,
-.login {
-  background-color: #d9b3db;
-  text-align: center;
-  padding: 50px;
-  height: 600px;
-}
