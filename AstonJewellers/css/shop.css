@@ -38,36 +38,34 @@ h3+p {
 }
 
 .bracelets {
-  background-image: url(https://cdn.shopify.com/s/files/1/0171/2222/collections/Homepage_Top_Banner_Slides_3.jpg);
+  background-image: url(../images/shop/home/home-bracelets.jpg);
   background-position: bottom left;
   color: #fff;
 }
 
 .watches {
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(https://st3.depositphotos.com/1569983/36762/i/450/depositphotos_367626970-stock-photo-stylish-white-watch-woman-hand.jpg); 
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../images/shop/home/home-watches.jpg); 
   color: #fff;
 }
 
 .rings {
-  background-image: url(https://nuvomagazine.scdn2.secure.raxcdn.com/wp-content/uploads/2021/02/TrueLoveRightHandRing-Tourmaline-scaled.jpg); 
+  background-image: url(../images/shop/home/home-rings.jpg); 
   color: #fff;
 }
 
 .necklaces {
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),url(https://www.marthajackson.co.uk/content/uploads/2022/11/NECKLACE-CATEGORY-.jpg); 
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),url(../images/shop/home/home-necklaces.jpg); 
   color: #fff;
+}
 
+.earrings {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(../images/shop/home/home-earrings.jpg); 
+  color: #fff;
 }
 
 .necklaces h3,
 .earrings h3{
   margin-top: auto;
-}
-
-.earrings {
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(https://cdn.shopify.com/s/files/1/1288/0259/collections/1972_Silver_Paradiso_copy_2880x1280.jpg); 
-  color: #fff;
-
 }
 
 @media (min-width: 500px) {
