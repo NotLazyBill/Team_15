@@ -421,3 +421,18 @@ align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.footer {
+  text-align: center;
+  color: white;
+  background-color: rgb(66, 66, 66);
+  padding: 10px;
+}
+
+.register,
+.login {
+  background-color: #d9b3db;
+  text-align: center;
+  padding: 50px;
+  height: 600px;
+}
