@@ -1,111 +1,151 @@
-@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300&display=swap');
-
-:root {
-  --depth: 30px;
-  --perspective: 1000px;
+body {
+  background-color: #efefef;  
 }
 
-#product-list {
-  margin-top: 60px;
+h3+p {
+  margin-top: 0;
+  text-align: center;
+}
+
+.wrapper {
   width: 98%;
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+.wrapper a {
+  text-decoration: none;
+}
+
+.wrapper h3 {
+  margin: 0;
+  color:white;
+}
+
+.image-panel {
   display: grid;
-    position: relative;
-  grid-auto-flow: dense; 
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: 8vw;
-  grid-gap: 50px;
-  perspective: var(--perspective);
-  perspective-origin: 50% 50%;
+  grid-gap: 1px;
+  grid-auto-rows: minmax(150px, auto);
+  height: calc(100vh - 310px);
 }
 
-#product-list li {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transform: translateZ(calc(0px + var(--depth)));
-  border: 1px #1D3557 solid;
-  grid-row: span 5;
+.image-panel > * {
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #333;
+  color: #fff;
 }
 
-#product-list li::after {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: '';
-  background-color: rgba(168, 218, 220, 0.2);
-  background-color: rgba(138, 179, 181, 0.2);
-  background-color: rgba(29, 53, 87, 0.2);
+.bracelets {
+  background-image: url(https://cdn.shopify.com/s/files/1/0171/2222/collections/Homepage_Top_Banner_Slides_3.jpg);
+  background-position: bottom left;
+  color: #fff;
 }
 
-#product-list img {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  width: 80%;
-  transform: translateY(-50%) translateZ(calc(0px - (var(--depth)/2)));
-  -webkit-filter: drop-shadow(0 50px 50px  rgba(0, 0, 0, 0.10));
-  filter: drop-shadow(0 50px 50px rgba(0, 0, 0, 0.30));
+.watches {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(https://st3.depositphotos.com/1569983/36762/i/450/depositphotos_367626970-stock-photo-stylish-white-watch-woman-hand.jpg); 
+  color: #fff;
 }
 
-#product-list .expand {
-  left: 0%;
-  width: 100%;
+.rings {
+  background-image: url(https://nuvomagazine.scdn2.secure.raxcdn.com/wp-content/uploads/2021/02/TrueLoveRightHandRing-Tourmaline-scaled.jpg); 
+  color: #fff;
 }
 
-#product-list .shrink {
-  left: 15%;
-  width: 70%;  
+.necklaces {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),url(https://www.marthajackson.co.uk/content/uploads/2022/11/NECKLACE-CATEGORY-.jpg); 
+  color: #fff;
+
 }
 
-#product-list .size1 {
-    grid-row: span 5; 
+.necklaces h3,
+.earrings h3{
+  margin-top: auto;
 }
 
-#product-list .size2 {
-    grid-row: span 6; 
+.earrings {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(https://cdn.shopify.com/s/files/1/1288/0259/collections/1972_Silver_Paradiso_copy_2880x1280.jpg); 
+  color: #fff;
+
 }
 
-#product-list .size3 {
-    grid-row: span 7; 
-}
+@media (min-width: 500px) {
+  .image-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .bracelets {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+  
+  .necklaces {
+    grid-column: 1;
+    grid-row: 3 / 6;
+  }
+  .earrings {
+    grid-column: 1;
+    grid-row: 6;
+  }
 
-#product-list .size4 {
-    grid-row: span 8; 
-}
+  .rings {
+    grid-column: 2;
+    grid-row: 3 / 5;
+  }
 
-#product-list h2 {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 1em;
-  color: #444545;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-
-#product-list .price {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  color: #444545;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-
-@media (min-width:565px) { 
-  #product-list {
-    grid-auto-rows: 6vw;
+  .watches {
+    grid-column: 2;
+    grid-row: 5 / 7;
   }
 }
 
-@media (min-width:815px) { 
-  body{
-    margin: 50px;
+@media (min-width: 800px) {
+   .image-panel {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(150px, auto) minmax(150px, auto);
+    grid-auto-rows: minmax(100px, auto);
   }
-  #product-list {
-    grid-auto-rows: 20px;
-    grid-gap: 50px;
+  .bracelets {
+    grid-column: 1 ;
+    grid-row: 1 / 6;
   }
+  
+  .necklaces {
+    grid-column: 2;
+    grid-row: 1 / 4;
+  }
+  .earrings {
+    grid-column: 2;
+    grid-row: 4 / 6;
+  }
+
+  .rings {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+
+  .watches {
+    grid-column: 3;
+    grid-row: 3 / 6;
+  }
+}
+
+.back a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.back a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  margin-left: 50px;
+  margin-top: 10px;
+  background-color: #f1f1f1;
+  color: black;
+  border-radius: 10%;
 }

@@ -35,7 +35,7 @@
                 <div id="topnav-centered">
                     <ul>
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="shop.php">Shop</a></li>
                         <li><a href="#">Men's</a></li>
                         <li><a href="#">Sale</a></li>
                         <li><a href="about-us.html">About Us</a></li>
