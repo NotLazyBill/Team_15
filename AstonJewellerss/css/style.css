@@ -19,6 +19,14 @@ h2 {
   text-align: center;
 }
 
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  align-items: flex-start;
+}
+
 .topnav {
   background-color: rgb(66, 66, 66);
   overflow: hidden;
