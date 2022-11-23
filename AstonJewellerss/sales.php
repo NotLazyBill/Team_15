@@ -69,10 +69,10 @@ $result = $stmt->fetchAll();
             foreach($result as $row) {
                 echo "<div class=\"content\">";
                 echo "<div class=\"zoom\">";
-                echo "<img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\">";
+                echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
                 echo "</div>";
-                echo "<h3>" . $row["name"] . "</h3>";
-                echo "<p>" . $row["desc"] . "</p>";
+                echo "<h3><a href= view_product.php>" . $row["name"] . "</a></h3>";
+                echo "<p><a href= view_product.php>" . $row["desc"] . "</a></p>";
                 echo "<h6>£" . $row["price"] . ".00</h6>";
                 echo "<button class=\"buy-1\">Add to Basket</button>";
                 echo "</div>";
