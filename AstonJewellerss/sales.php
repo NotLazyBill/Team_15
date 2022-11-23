@@ -23,10 +23,10 @@ $result = $stmt->fetchAll();
             foreach($result as $row) {
                 echo "<div class=\"content\">";
                 echo "<div class=\"zoom\">";
-                echo "<img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\">";
+                echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
                 echo "</div>";
-                echo "<h3>" . $row["name"] . "</h3>";
-                echo "<p>" . $row["desc"] . "</p>";
+                echo "<a href= view_product.php><h3>" . $row["name"] . "</h3></a>";
+                echo "<a href= view_product.php><p>" . $row["desc"] . "</p></a>";
                 echo "<h6>£" . $row["price"] . "</h6>";
                 echo "<button class=\"btn my-3\">Add to Basket</button>";
                 echo "</div>";
