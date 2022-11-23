@@ -28,7 +28,7 @@ $result = $stmt->fetchAll();
                 echo "<h3>" . $row["name"] . "</h3>";
                 echo "<p>" . $row["desc"] . "</p>";
                 echo "<h6>£" . $row["price"] . "</h6>";
-                echo "<button class=\"buy-1\">Add to Basket</button>";
+                echo "<button class=\"btn my-3\">Add to Basket</button>";
                 echo "</div>";
             }
         ?>
