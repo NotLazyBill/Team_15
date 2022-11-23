@@ -8,28 +8,55 @@ session_start();
 <?php loadHeader(); ?>
 
 <body>
-  <main>
-    <div class="container">
-      <div class="item">
-        <div class="product-img">
-          <img class="product-img" src="images/diamondearrings.jpg" alt="">
-        </div>
-        <div class="product">
-          <h2>Product name</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <span>£70</span>
-          <div class="product-buttons">
-            <button type="submit" class="btn btn-warning my-3" name="add">Add to Basket <i class="fa fa-shopping-cart"></i></button>
-            <button type="submit" class="btn btn-danger my-3" name="add"><i class="fa fa-heart-o"></i></button>
-          </div>
-          <form class="back-btn">
-            <button type="button" class="btn btn-success my-3" onclick="history.back()">Back</button>
-          </form>
-        </div>
+  <header id="main-header">
+    <div class="topnav" id="nav">
+      <a href="#"><i class="fa fa-search"></i> Search</a>
+      <a href="#"><i class="fas fa-shipping-fast"></i> Shipping & Delivery info</a>
+      <div class="topnav-right">
+        <a href="#"><i class="fas fa-user-circle"></i> Log In</a>
       </div>
-    </div>
-  </main>
-  <?php loadFooter(); ?>
-</body>
+      <br /><br /><br />
+      <h1>Aston Jewellers</h1>
+      <p>Selling high-qality affordable jewellery</p>
 
+      <nav>
+        <div class="topnav-right">
+          <a href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+          <a href="basket.html"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+        <div id="topnav-centered">
+          <ul>
+            <li><a href="index.html">New In</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">Men's</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="sales.html">Sale</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+        <div class = "box">
+            <div class = "pic">
+                <img src="images/salebraclet4.jpg" alt="patterned-gold-bracelet" />
+            </div>
+            <br>
+            <h6>Chunky Gold Bracelet, now £18</h6>
+            <div class = "info">
+                This is another chunky gold bracelet. It is bigger than our regular bracelets, but
+                still just as glamorous and sparkly. It is gold and has a unique pattern around the outside
+                of the bracelet, making it a one-of-a-kind bracelet. This has no clasp around the outside, but it is
+                suitable for all people. This bracelet was £25, but now it is on sale for £18, so get one now to help uplift
+                your style.
+            </div>
+                <br><br>
+            <div class="card-body">
+                <div class="buttons">
+                    <button type="submit" class="btn btn-warning my-3" name="add">Add to Basket</button>
+                    <button type="submit" class="btn btn-danger my-3" name="add">Go Back</button>
+            </div>
+    </main>
+</body>
 </html>

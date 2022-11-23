@@ -236,6 +236,8 @@ h2 {
   margin: 0 auto; 
 }
 
+/*Basket*/
+
 .basket{
   margin: 80px auto;
   width: 1000px;
@@ -280,6 +282,8 @@ td input{
   justify-content: flex-end;
   width: 1000px;
 }
+
+/*Sales*/
 
 h3{
   text-align:center;
@@ -355,22 +359,16 @@ h6{
   margin:0;
 }
 
-.button{
-  text-align: center;
-  font-size: 24px;
-  color:#fff;
-  width: 100%;
-  padding:15px;
-  border:0;
-  outline: none;
+.btn{
+  background: #e691d4;
   cursor: pointer;
-  margin-top: 5px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
-.buy-1{
-  background: #ee86d7;
+/*WishList*/ 
+
+.container{
+  width: 1000px;
+  margin-bottom: 20px;
 }
 
 .card-horizontal {
@@ -391,6 +389,66 @@ h6{
   padding: 10px;
 }
 
+/*Product View*/
+
+
+.item{
+  margin: 40px auto 0;
+  background-color: #f2e3e3;
+  border: 15px solid rgb(245, 143, 243);
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product-img{
+  height: 500px;
+  width: 500px;
+  margin-left: 20px;
+}
+
+.product{
+  margin-right: 100px;
+}
+
+.product p{
+  font-size: 20px;
+}
+.product span{
+  font-size: 25px;
+}
+
+.product-buttons{
+  margin-left: 180px;
+  margin-top: 50px;
+}
+
+.back-btn{
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Footer*/
+
+.footer {
+  text-align: center;
+  color: white;
+  background-color: rgb(66, 66, 66);
+  padding: 10px;
+}
+
+/*Login and*/
+
+.register,
+.login {
+  background-color: #d9b3db;
+  text-align: center;
+  padding: 50px;
+  height: 600px;
+}
+
 @media(max-width:1000px){
   .content{
       width: 45px;
@@ -401,45 +459,4 @@ h6{
   .content{
       width: 45px;
   }
-}
-
-img {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  display: block;
-  justify-content: center;
-  align-items: center;
-}
-
-.info {
-text-align: center;
-align-items: center;
-}
-
-.box {    
-  justify-content: center;
-  align-items: center;
-  background-color: #f2e3e3;
-  width: 500px;
-  border: 15px solid rgb(245, 143, 243);
-  padding:40px;
-  margin-left: 500px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.footer {
-  text-align: center;
-  color: white;
-  background-color: rgb(66, 66, 66);
-  padding: 10px;
-}
-
-.register,
-.login {
-  background-color: #d9b3db;
-  text-align: center;
-  padding: 50px;
-  height: 600px;
 }
