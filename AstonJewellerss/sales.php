@@ -74,7 +74,7 @@ $result = $stmt->fetchAll();
                 echo "<a href= view_product.php><h3>" . $row["name"] . "</h3></a>";
                 echo "<a href= view_product.php><p>" . $row["desc"] . "</p></a>";
                 echo "<h6>£" . $row["price"] . ".00</h6>";
-                echo "<button class=\"buy-1\">Add to Basket</button>";
+                echo "<button class=\"btn my-3\">Add to Basket</button>";
                 echo "</div>";
             }
         ?>

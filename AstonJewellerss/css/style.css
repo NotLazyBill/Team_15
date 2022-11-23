@@ -236,6 +236,8 @@ h2 {
   margin: 0 auto; 
 }
 
+/*Basket*/
+
 .basket{
   margin: 80px auto;
   width: 1000px;
@@ -280,6 +282,8 @@ td input{
   justify-content: flex-end;
   width: 1000px;
 }
+
+/*Sales*/
 
 h3{
   text-align:center;
@@ -355,22 +359,9 @@ h6{
   margin:0;
 }
 
-.button{
-  text-align: center;
-  font-size: 24px;
-  color:#fff;
-  width: 100%;
-  padding:15px;
-  border:0;
-  outline: none;
+.btn{
+  background: #e691d4;
   cursor: pointer;
-  margin-top: 5px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.buy-1{
-  background: #ee86d7;
 }
 
 /*WishList*/ 
