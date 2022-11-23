@@ -1,13 +1,12 @@
 <?php
 include './functions.php';
-loadHeader();
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+<?php loadHeader(); ?>
 <body>
-
   <div class="register">
     <h2>Register Now!</h2> <br>
     <form method="post" action="register.php">
@@ -23,9 +22,6 @@ session_start();
     <p> Already a user? <a href="login.php" class="btn btn-outline-dark">Log in</a> </p>
   </div>
 </body>
+<?php loadFooter(); ?>
 
 </html>
-
-<?php
-loadFooter();
-?>

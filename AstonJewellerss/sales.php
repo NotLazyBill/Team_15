@@ -1,6 +1,5 @@
 <?php
 include './functions.php';
-loadHeader();
 session_start();
 
 // Gets all Products
@@ -11,6 +10,7 @@ $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $result = $stmt->fetchAll();
 ?>
 
+<?php loadHeader(); ?>
 <body>
   <main>
     <h2>Check out our sale today!</h2>
@@ -20,21 +20,18 @@ $result = $stmt->fetchAll();
         <?php
         // Displays all products
         // NOTE: ADD PRODUCTS TO THE DB FIRST
-            foreach($result as $row) {
-                echo "<div class=\"content\">";
-                echo "<div class=\"zoom\">";
-                echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
-                echo "</div>";
-                echo "<a href= view_product.php><h3>" . $row["name"] . "</h3></a>";
-                echo "<a href= view_product.php><p>" . $row["desc"] . "</p></a>";
-                echo "<h6>£" . $row["price"] . ".00</h6>";
-                echo "<button class=\"btn my-3\">Add to Basket</button>";
-                echo "</div>";
+        foreach ($result as $row) {
+          echo "<div class=\"content\">";
+          echo "<div class=\"zoom\">";
+          echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
+          echo "</div>";
+          echo "<a href= view_product.php><h3>" . $row["name"] . "</h3></a>";
+          echo "<a href= view_product.php><p>" . $row["desc"] . "</p></a>";
+          echo "<h6>£" . $row["price"] . ".00</h6>";
+          echo "<button class=\"btn my-3\">Add to Basket</button>";
+          echo "</div>";
         }
         ?>
   </main>
+  <?php loadFooter(); ?>
 </body>
-
-<?php
-loadFooter();
-?>

@@ -12,10 +12,12 @@ function getDb()
 function loadFooter()
 {
     // Loads the Footer 
+    echo  "<footer>";
     echo  "<div class=\"footer\">";
     echo  "&copy <?= date(\"Y\") ?> Aston Jewellers LtD";
     echo  "United Kingdom | GBP (£)";
     echo  "</div>";
+    echo  "</footer>";
 }
 
 function loadHeader()
@@ -33,7 +35,6 @@ function loadHeader()
   <script defer src="js/main.js"></script>
 </head>
 
-<body>
 <header id="main-header">
       <div class="topnav" id="nav">
         <div class="container-fluid">

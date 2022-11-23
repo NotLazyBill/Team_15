@@ -1,6 +1,5 @@
 <?php
 include './functions.php';
-loadHeader();
 session_start();
 
 $product = "";
@@ -9,6 +8,9 @@ if (isset($_GET['product'])) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<?php loadHeader(); ?>
 <body>
 
   <!-- Show store categories when no product is selected (default) -->
@@ -427,6 +429,7 @@ if (isset($_GET['product'])) {
   <!-- End of watches -->
 
 </body>
+
 </html>
 
 <?php

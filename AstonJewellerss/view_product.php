@@ -1,11 +1,12 @@
 <?php
 include './functions.php';
-loadHeader();
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+<?php loadHeader(); ?>
+
 <body>
   <main>
     <div class="container">
@@ -28,9 +29,7 @@ session_start();
       </div>
     </div>
   </main>
+  <?php loadFooter(); ?>
 </body>
-</html>
 
-<?php
-loadFooter();
-?>
+</html>
