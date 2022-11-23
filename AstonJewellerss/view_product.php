@@ -38,25 +38,27 @@ session_start();
     </div>
   </header>
   <main>
-        <div class = "box">
-            <div class = "pic">
-                <img src="images/salebraclet4.jpg" alt="patterned-gold-bracelet" />
-            </div>
-            <br>
-            <h6>Chunky Gold Bracelet, now £18</h6>
-            <div class = "info">
-                This is another chunky gold bracelet. It is bigger than our regular bracelets, but
-                still just as glamorous and sparkly. It is gold and has a unique pattern around the outside
-                of the bracelet, making it a one-of-a-kind bracelet. This has no clasp around the outside, but it is
-                suitable for all people. This bracelet was £25, but now it is on sale for £18, so get one now to help uplift
-                your style.
-            </div>
-                <br><br>
-            <div class="card-body">
-                <div class="buttons">
-                    <button type="submit" class="btn btn-warning my-3" name="add">Add to Basket</button>
-                    <button type="submit" class="btn btn-danger my-3" name="add">Go Back</button>
-            </div>
-    </main>
+    <div class="box">
+      <div class="pic">
+        <img src="images/salebraclet4.jpg" alt="patterned-gold-bracelet" />
+      </div>
+      <br>
+      <h6>Chunky Gold Bracelet, now £18</h6>
+      <div class="info">
+        This is another chunky gold bracelet. It is bigger than our regular bracelets, but
+        still just as glamorous and sparkly. It is gold and has a unique pattern around the outside
+        of the bracelet, making it a one-of-a-kind bracelet. This has no clasp around the outside, but it is
+        suitable for all people. This bracelet was £25, but now it is on sale for £18, so get one now to help uplift
+        your style.
+      </div>
+      <br><br>
+      <div class="card-body">
+        <div class="buttons">
+          <button type="submit" class="btn btn-warning my-3" name="add">Add to Basket</button>
+          <button type="submit" class="btn btn-danger my-3" name="add">Go Back</button>
+        </div>
+  </main>
+  <?php loadFooter(); ?>
 </body>
+
 </html>
