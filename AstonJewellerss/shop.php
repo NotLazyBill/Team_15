@@ -69,7 +69,7 @@ if (isset($_GET['product'])) {
         <h3>Bracelet</h3>
         <p>Silver Guardian Angel Bracelet</p>
         <h6>£17.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3" >Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -79,7 +79,7 @@ if (isset($_GET['product'])) {
         <h3>Bracelet</h3>
         <p>Plain Silver Bracelet</p>
         <h6>£13.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -89,7 +89,7 @@ if (isset($_GET['product'])) {
         <h3>Bracelet</h3>
         <p>Teardrop Shaped Gemstone Silver Bracelet</p>
         <h6>£25.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -99,7 +99,7 @@ if (isset($_GET['product'])) {
         <h3>Bracelet</h3>
         <p>Plain Silver Bangle</p>
         <h6>£15.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -109,7 +109,7 @@ if (isset($_GET['product'])) {
         <h3>Bracelet</h3>
         <p>Silver Butterfly Bracelet</p>
         <h6>£18.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -119,7 +119,7 @@ if (isset($_GET['product'])) {
         <h3>Bracelet</h3>
         <p>Oval Cut Gemstone Bracelet</p>
         <h6>£25.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -129,7 +129,7 @@ if (isset($_GET['product'])) {
         <h3>Bracelet</h3>
         <p>Green Amber Square Gemstone Bracelet</p>
         <h6>£27.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
     </div>
@@ -147,7 +147,7 @@ if (isset($_GET['product'])) {
         <h3>Necklace</h3>
         <p>Gold Heart Necklace</p>
         <h6>£18.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -157,7 +157,7 @@ if (isset($_GET['product'])) {
         <h3>Necklace</h3>
         <p>Gold Four Leaf Clover Necklace</p>
         <h6>£18.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -167,7 +167,7 @@ if (isset($_GET['product'])) {
         <h3>Necklace</h3>
         <p>3 Heart Necklace</p>
         <h6>£22.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -177,7 +177,7 @@ if (isset($_GET['product'])) {
         <h3>Necklace</h3>
         <p>Flower with Pearl Necklace</p>
         <h6>£20.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -187,7 +187,7 @@ if (isset($_GET['product'])) {
         <h3>Necklace</h3>
         <p>Mermaid Necklace</p>
         <h6>£20.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -197,7 +197,7 @@ if (isset($_GET['product'])) {
         <h3>Necklace</h3>
         <p>Hollow Heart Necklace</p>
         <h6>£16.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -207,7 +207,7 @@ if (isset($_GET['product'])) {
         <h3>Necklace</h3>
         <p>Poppies Necklace</p>
         <h6>£27.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
     </div>
@@ -225,7 +225,7 @@ if (isset($_GET['product'])) {
         <h3>Earrings</h3>
         <p>Emerald Gold Hoop Earrings</p>
         <h6>£24.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -235,7 +235,7 @@ if (isset($_GET['product'])) {
         <h3>Earrings</h3>
         <p>Double Hoop Diamond Earrings</p>
         <h6>£25.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -245,7 +245,7 @@ if (isset($_GET['product'])) {
         <h3>Earrings</h3>
         <p>Pearl Earrings</p>
         <h6>£20.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -255,7 +255,7 @@ if (isset($_GET['product'])) {
         <h3>Earrings</h3>
         <p>Diamond Star Earrings</p>
         <h6>£27.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -265,7 +265,7 @@ if (isset($_GET['product'])) {
         <h3>Earrings</h3>
         <p>Pastel Heart Earrings</p>
         <h6>£20.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -275,7 +275,7 @@ if (isset($_GET['product'])) {
         <h3>Earrings</h3>
         <p>Diamond & Gold Round Earrings</p>
         <h6>£30.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -285,7 +285,7 @@ if (isset($_GET['product'])) {
         <h3>Earrings</h3>
         <p>Flower Earrings</p>
         <h6>£25.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
     </div>
@@ -303,7 +303,7 @@ if (isset($_GET['product'])) {
         <h3>Ring</h3>
         <p>Purple Gemstone Ring</p>
         <h6>£25.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -313,7 +313,7 @@ if (isset($_GET['product'])) {
         <h3>Ring</h3>
         <p>Black Diamond Ring</p>
         <h6>£25.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -323,7 +323,7 @@ if (isset($_GET['product'])) {
         <h3>Ring</h3>
         <p>Gold & Black Heart Ring</p>
         <h6>£20.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -333,7 +333,7 @@ if (isset($_GET['product'])) {
         <h3>Ring</h3>
         <p>Infinite Hearts Ring</p>
         <h6>£25.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -343,7 +343,7 @@ if (isset($_GET['product'])) {
         <h3>Ring</h3>
         <p>Silver Love Ring</p>
         <h6>£25.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -353,7 +353,7 @@ if (isset($_GET['product'])) {
         <h3>Ring</h3>
         <p>Joined Hearts Ring</p>
         <h6>£27.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
     </div>
@@ -371,7 +371,7 @@ if (isset($_GET['product'])) {
         <h3>Watch</h3>
         <p>Pink & Gold Bracelet Watch</p>
         <h6>£40.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -381,7 +381,7 @@ if (isset($_GET['product'])) {
         <h3>Watch</h3>
         <p>Minimalistic Gold & White Watch</p>
         <h6>£45.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -391,7 +391,7 @@ if (isset($_GET['product'])) {
         <h3>Watch</h3>
         <p>Silver & Grey Watch</p>
         <h6>£38.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -401,7 +401,7 @@ if (isset($_GET['product'])) {
         <h3>Watch</h3>
         <p>Casual Timeless Watch</p>
         <h6>£35.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -411,7 +411,7 @@ if (isset($_GET['product'])) {
         <h3>Watch</h3>
         <p>Rose Gold Stars Watch</p>
         <h6>£45.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
       <div class="content">
@@ -421,7 +421,7 @@ if (isset($_GET['product'])) {
         <h3>Watch</h3>
         <p>Wooden Strap Watch</p>
         <h6>£38.00</h6>
-        <button class="buy-1">Add to Basket</button>
+        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
       </div>
 
     </div>
