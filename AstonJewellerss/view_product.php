@@ -11,7 +11,7 @@ session_start();
   <main>
   <div class = "container">
       <div class="item">
-      <div class="product-img">
+      <div id="container">
         <img class="product-img" src="images/diamondearrings.jpg" alt="">
       </div>
       <div class="product">
@@ -28,6 +28,7 @@ session_start();
       </div>
       </div>
     </div>
+    <script src="js/main.js"></script>
   </main>
   <?php loadFooter(); ?>
 </body>
