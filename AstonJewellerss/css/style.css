@@ -356,10 +356,9 @@ h6{
   font: size 26px;
   text-align: center;
   color:#222f3e;
-  margin:0;
 }
 
-.btn{
+.content button{
   background: #e691d4;
   cursor: pointer;
 }
