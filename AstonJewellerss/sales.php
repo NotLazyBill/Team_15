@@ -1,17 +1,16 @@
 <?php
 include './functions.php';
-session_start();
 
 // Gets all Products
 $conn = getDb();
+
 $stmt = $conn->prepare("SELECT id, name, price, image, `desc`, alt_text FROM product WHERE stock > 0");
 $stmt->execute();
-$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-$result = $stmt->fetchAll();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<?php loadHeader(); ?>
 <body>
+<?php loadHeader(); ?>
   <main>
     <h2>Check out our sale today!</h2>
 

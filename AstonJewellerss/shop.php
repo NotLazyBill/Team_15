@@ -1,6 +1,5 @@
 <?php
 include './functions.php';
-session_start();
 
 $product = "";
 if (isset($_GET['product'])) {
@@ -10,9 +9,8 @@ if (isset($_GET['product'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-<?php loadHeader(); ?>
 <body>
-
+  <?php loadHeader(); ?>
   <!-- Show store categories when no product is selected (default) -->
   <?php if (!isset($_GET['product'])) { ?>
     <div class="wrapper">

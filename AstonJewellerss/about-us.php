@@ -1,14 +1,12 @@
 <?php
 include './functions.php';
-loadHeader();
-session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <body>
+  <?php loadHeader(); ?>
   <main>
-
     <section id="vision">
       <h3> Our Vision</h3>
       <li>Our company started a couple of years back when we realised how expensive the jewellery market and how much it

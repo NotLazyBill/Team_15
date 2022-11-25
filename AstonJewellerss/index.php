@@ -1,12 +1,12 @@
 <?php
 include './functions.php';
-session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<?php loadHeader(); ?>
 <body>
+<?php loadHeader();?>
+
 <main>
   <div class="left">
     <section id="style">

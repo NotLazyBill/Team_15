@@ -1,5 +1,10 @@
 <?php
 include './secrets.php';
+
+session_start();
+
+
+
 function getDb()
 {
     // This connects to the Database using the hidden credentials
@@ -46,8 +51,11 @@ function loadHeader()
             <p>Selling high-quality affordable jewellery</p>
           </div>
           <div class="topnav-right">
-            <a href="login.php"><i class="fas fa-user-circle"></i> Log In</a>
-           
+            <?php if (isset($_SESSION['id'])) { ?>
+              <a href="login.php"><i class="fas fa-user-circle"></i><?php echo " " . $_SESSION['fname'] . " (Logout)" ?></a>
+            <?php } else { ?>
+              <a href="login.php"><i class="fas fa-user-circle"></i> Log In</a>
+            <?php } ?>
           </div>
         </div>
         <nav>

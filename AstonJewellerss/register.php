@@ -1,8 +1,7 @@
 <?php
 include './functions.php';
+
 $conn = getDb();
-
-
 
 if (isset($_POST["fname"]) && isset($_POST["lname"]) && isset($_POST["Uname"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["cpassword"])) {
   require_once('secrets.php');
@@ -72,9 +71,8 @@ if (isset($_POST["fname"]) && isset($_POST["lname"]) && isset($_POST["Uname"]) &
 
 <!DOCTYPE html>
 <html lang="en">
-<?php loadHeader(); ?>
-
 <body>
+  <?php loadHeader(); ?>
   <div class="register">
     <h2>Register Now!</h2> <br>
     <form method="post" action="register.php">
