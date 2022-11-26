@@ -1,66 +1,139 @@
-<div id="viewport">
-  <!-- Sidebar -->
-  <div id="sidebar">
-    <header>
-      <a href="#">My App</a>
-    </header>
-    <ul class="nav">
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-view-dashboard"></i> Dashboard
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-link"></i> Shortcuts
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-widgets"></i> Overview
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-calendar"></i> Events
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-info-outline"></i> About
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-settings"></i> Services
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="zmdi zmdi-comment-more"></i> Contact
-        </a>
-      </li>
-    </ul>
-  </div>
-  <!-- Content -->
-  <div id="content">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
-            </a>
-          </li>
-          <li><a href="#">Test User</a></li>
-        </ul>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aston Jewellers</title>
+    <link rel="icon" href="images/favicon.ico?v=2" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c54d8b2ca0.js"
+      crossorigin="anonymous">
+    </script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+
+    <header id="main-header">
+      <div class="topnav" id="nav">
+        <div class="container-fluid">
+          <div>
+            <a href="#"><i class="fa fa-search"></i> Search</a>
+          </div>
+          <div>
+            <h1>Aston Jewellers</h1>
+            <p>Selling high-quality affordable jewellery</p>
+          </div>
+          <div class="topnav-right">
+            <a href="login.php"><i class="fas fa-user-circle"></i> Log In</a>
+           
+          </div>
+        </div>
+        <nav>
+          <div class="topnav-right">
+            <a href="wishlist.php"><i class="fa fa-heart-o"></i></a>
+            <a href="basket.php"><i class="fa fa-shopping-cart"></i></a>
+          </div>
+          <div id="topnav-centered">
+            <ul>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="shop.php">Shop</a></li>
+              <li><a href="#">Men's</a></li>
+              <li><a href="sales.php">Sale</a></li>
+              <li><a href="about-us.php">About Us</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
-    <div class="container-fluid">
-      <h1>Simple Sidebar</h1>
-      <p>
-        Make sure to keep all page content within the 
-        <code>#content</code>.
-      </p>
-    </div>
-  </div>
-</div>
+    </header>
+  <main>
+    <br>
+    <table>
+      <tr>
+        <th>User Logins</th>
+        <th>Customer Orders</th>
+      </tr>
+      <tr>
+        <td>Example@hotmail.com</td>
+        <td>One Ring</td>
+      </tr>
+    </table>
+
+    <br><br><br>
+
+    <table>
+      <tr>
+        <th>Products- Watches</th>
+        <th>In Stock</th>
+      </tr>
+      <tr>
+        <td>Watch name</td>
+        <td>10</td>
+      </tr>
+    </table>
+
+    <br><br><br>
+
+    <table>
+      <tr>
+        <th>Products- Rings</th>
+        <th>In Stock</th>
+      </tr>
+      <tr>
+        <td>Gold Princess Ring</td>
+        <td>17</td>
+      </tr>
+    </table>
+
+    <br><br><br>
+
+    <table>
+      <tr>
+        <th>Products- Bracelets</th>
+        <th>In Stock</th>
+      </tr>
+      <tr>
+        <td>Gold Chunky Bracelet</td>
+        <td>15</td>
+      </tr>
+    </table>
+
+    <br><br><br>
+
+    <table>
+      <tr>
+        <th>Products- Earrings</th>
+        <th>In Stock</th>
+      </tr>
+      <tr>
+        <td>Round Cut Stud Earrings 6mm-Silver</td>
+        <td>5 pairs</td>
+      </tr>
+    </table>
+
+    <br><br><br>
+
+    <table>
+      <tr>
+        <th>Products- Necklaces</th>
+        <th>In Stock</th>
+      </tr>
+      <tr>
+        <td>Little Sea Shell Necklace</td>
+        <td>20</td>
+      </tr>
+    </table>
+
+
+    
+</main>
+</body>
+</html>
+
+<?php
+include('footer.php');
+?>
