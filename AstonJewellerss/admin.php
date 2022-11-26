@@ -27,7 +27,7 @@ if (!$_SESSION['admin']) {
 <div id="viewport">
   <!-- Sidebar -->
   <div id="sidebar">
-    <header><a href="#">Admin</a></header>
+    <header><a>Admin</a></header>
     <ul class="nav">
       <li><a href="index.php"><i class="zmdi zmdi-home"></i>Home</a></li>
       <li><a href="admin.php"><i class="zmdi zmdi-view-dashboard"></i>Dashboard</a></li>
@@ -42,14 +42,28 @@ if (!$_SESSION['admin']) {
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><i class="zmdi zmdi-account-circle">&nbsp</i><?php echo $_SESSION['fname'];?></a></li>
+          <li><a href="login.php"><i class="zmdi zmdi-account-circle">&nbsp</i><?php echo $_SESSION['fname'];?> (Logout)</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- Content -->
     <div class="container-fluid">
-      <h1>placeholder</h1>
+      <!-- Load pages -->
+      <?php
+      // Load dashboard 
+      if (!isset($_GET['page'])) { include './admin-pages/dashboard.php'; }
+      else {
+        $page = $_GET['page'];
+
+        // Load products
+        if ($_GET['page'] == "products") { include './admin-pages/products.php'; }
+        // Load orders
+        elseif ($_GET['page'] == "orders") { include './admin-pages/orders.php'; }
+        // Load customers
+        elseif ($_GET['page'] == "customers") { include './admin-pages/customers.php'; }
+      }
+      ?>
     </div>
   </div>
 </div>
