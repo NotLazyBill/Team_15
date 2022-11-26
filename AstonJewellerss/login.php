@@ -20,6 +20,7 @@ if (isset($_POST['submit'])) {
             if (password_verify($password, $customer['password'])) {
                 $_SESSION['fname'] = $customer['fname'];
                 $_SESSION['id'] = $customer['id'];
+                $_SESSION['admin'] = $customer['admin'];
                 header("Location: index.php");
             }
             else {
