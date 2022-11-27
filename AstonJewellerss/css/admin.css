@@ -24,7 +24,7 @@ body {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: rgb(66, 66, 66);
+  background: rgb(37, 38, 54);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -32,7 +32,7 @@ body {
 }
 
 #sidebar header {
-  background-color: rgb(49, 42, 42);
+  background-color: rgb(60, 63, 88);
   font-size: 20px;
   line-height: 52px;
   text-align: center;
@@ -63,4 +63,85 @@ body {
 
 #sidebar .nav a i{
   margin-right: 16px;
+}
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards li {
+  border: 2px solid rgb(60, 63, 88);
+  border-radius:5px;
+  background-color: rgb(37, 38, 54);
+  color: #fff;
+  flex: 1 1 200px;
+}
+
+.cards h2 {
+  background-color: rgb(60, 63, 88);
+  margin: 0;
+  padding: 10px;
+}
+
+.cards p {
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.flex li {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.add-product-form {
+  margin: 10px;
+  color:rgb(173, 175, 194);
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-auto-flow: row dense;
+  grid-gap: 1em;
+  margin: 10px;
+}
+
+.add-product-form > label  {
+  grid-column: 1;
+  grid-row: auto;
+}
+
+.add-product-form > input,
+.add-product-form > button,
+.add-product-form > select {
+  grid-column: 2;
+  grid-row: auto;
+  color: black;
+  border: none;
+  height: 25px;
+  font-size: 15px;
+}
+
+.add-product-form textarea {
+ min-height: calc(100% - 2em);
+ width: 100%;
+ border: none;
+}
+
+#desc-box {
+ grid-column: 3;
+ grid-row: span 3;
+}
+
+.add-product-form > button {
+ grid-column: 3;
+ grid-row: 5; 
+}
+
+#submit-product-form {
+  width: 100px;
 }
