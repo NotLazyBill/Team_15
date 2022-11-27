@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2022 at 08:25 PM
+-- Generation Time: Nov 28, 2022 at 12:21 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -66,23 +66,24 @@ CREATE TABLE `order_details` (
 CREATE TABLE `product` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` float NOT NULL,
   `type` int(11) NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `desc` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `alt_text` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
-  `stock` int(11) NOT NULL
+  `stock` int(11) NOT NULL,
+  `sale` tinyint(4) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `price`, `type`, `image`, `desc`, `alt_text`, `created_at`, `updated_at`, `stock`) VALUES
-(1, 'Necklace', 16, 1, 'images/diamondearrings.jpg', 'Not a Necklace', '123', '2022-11-22', '2022-11-23', 5),
-(2, 'Ear', 14, 1, 'images/diamondearrings.jpg', 'hey', '1234', '2022-11-22', '2022-11-23', 6);
+INSERT INTO `product` (`id`, `name`, `price`, `type`, `image`, `desc`, `alt_text`, `created_at`, `updated_at`, `stock`, `sale`) VALUES
+(1, 'Necklace', 16, 1, 'images/diamondearrings.jpg', 'Not a Necklace', '123', '2022-11-22', '2022-11-23', 5, 1),
+(2, 'Ear', 14, 1, 'images/diamondearrings.jpg', 'hey', '1234', '2022-11-22', '2022-11-23', 6, 1);
 
 -- --------------------------------------------------------
 
@@ -122,7 +123,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `admin`, `email`, `password`, `join_date`, `fname`, `lname`) VALUES
 (1, 'dfggdfgdf', 0, 'dfgdfgdf', 'dgdfgdf', '0000-00-00', 'dgfdgdf', 'dfgdfgdf'),
 (2, 'dfgdfgdf', 0, 'dfgdfgdf', 'dfgdfgdf', '0000-00-00', 'fgfdgfd', 'dfgfdgdf'),
-(3, 'dfgdfg', 0, 'dfgdfg', 'dfgdfgdf', '0000-00-00', 'dfgdfgdf', 'dfgdfgdf');
+(3, 'dfgdfg', 0, 'dfgdfg', 'dfgdfgdf', '0000-00-00', 'dfgdfgdf', 'dfgdfgdf'),
+(4, 'sfaasfa', 1, 'afdawsfaw', '$2y$10$P6GJeIts8EjlSQuBGZGKv.hQyfYOKZ.kx0/nqm13y02oshreKiFsC', '2022-11-25', 'test', 'dasdas');
 
 -- --------------------------------------------------------
 
@@ -241,7 +243,7 @@ ALTER TABLE `order_details`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `reviews`
@@ -253,7 +255,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_address`
