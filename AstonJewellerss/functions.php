@@ -19,7 +19,7 @@ function loadFooter()
     // Loads the Footer 
     echo  "<footer>";
     echo  "<div class=\"footer\">";
-    echo  "&copy <?= date(\"Y\") ?> Aston Jewellers LtD";
+    echo  "&copy <?= date(\"Y\") ?> Aston Jewellers LtD ";
     echo  "United Kingdom | GBP (£)";
     echo  "</div>";
     echo  "</footer>";
@@ -67,7 +67,7 @@ function loadHeader()
             <ul>
               <li><a href="index.php">Home</a></li>
               <li><a href="shop.php">Shop</a></li>
-              <li><a href="#">Men's</a></li>
+              <li><a href="mens.php">Men's</a></li>
               <li><a href="sales.php">Sale</a></li>
               <li><a href="about-us.php">About Us</a></li>
             </ul>

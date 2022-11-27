@@ -63,8 +63,34 @@ h3+p {
   color: #fff;
 }
 
+.chains-men {
+  background-image: url(../images/mens/home/chain.jpg);
+  background-position: bottom left;
+  color: #fff;
+}
+
+.watches-men {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../images/mens/home/watch.jpg); 
+  color: #fff;
+}
+
+.rings-men {
+  background-image: url(../images/mens/home/ring.jpg); 
+  color: #fff;
+}
+
+.bracelets-men {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),url(../images/mens/home/bracelet.jpg); 
+  color: #fff;
+}
+
+.earrings-men {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(../images/mens/home/earrings.jpg); 
+  color: #fff;
+}
+
 .necklaces h3,
-.earrings h3{
+.earrings h3 {
   margin-top: auto;
 }
 
@@ -96,6 +122,30 @@ h3+p {
     grid-column: 2;
     grid-row: 5 / 7;
   }
+
+  .chains-men {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+  
+  .bracelets-men {
+    grid-column: 1;
+    grid-row: 3 / 6;
+  }
+  .earrings-men {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
+  .rings-men {
+    grid-column: 2;
+    grid-row: 3 / 5;
+  }
+
+  .watches-men {
+    grid-column: 2;
+    grid-row: 5 / 7;
+  }
 }
 
 @media (min-width: 800px) {
@@ -124,6 +174,30 @@ h3+p {
   }
 
   .watches {
+    grid-column: 3;
+    grid-row: 3 / 6;
+  }
+
+  .chains-men {
+    grid-column: 1 ;
+    grid-row: 1 / 6;
+  }
+  
+  .bracelets-men {
+    grid-column: 2;
+    grid-row: 1 / 4;
+  }
+  .earrings-men {
+    grid-column: 2;
+    grid-row: 4 / 6;
+  }
+
+  .rings-men {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+
+  .watches-men {
     grid-column: 3;
     grid-row: 3 / 6;
   }
