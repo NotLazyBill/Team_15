@@ -44,7 +44,7 @@ function loadHeader()
       <div class="topnav" id="nav">
         <div class="container-fluid">
           <div>
-            <a href="#"><i class="fa fa-search"></i> Search</a>
+            <a href="search.php"><i class="fa fa-search"></i> Search</a>
           </div>
           <div>
             <h1>Aston Jewellers</h1>
