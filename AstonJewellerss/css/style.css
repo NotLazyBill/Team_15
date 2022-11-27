@@ -81,7 +81,7 @@ h2 {
 #topnav-centered a {
   float: left;
   text-decoration: none;
-  padding: 5px 40px;
+  padding: 15px 40px;
 }
 
 .topnav a:hover {
@@ -248,7 +248,7 @@ table{
   border-collapse: collapse;
 }
 
-img{
+.basket img{
   width: 200px;
   height: 200px
 }
@@ -326,7 +326,7 @@ h3{
   transform:translate(0px, -8px);
 }
 
-img{
+.content img{
   width: 200px;
   height: 200px;
   text-align: center;
@@ -386,6 +386,11 @@ h6{
 
 .image{
   padding: 10px;
+}
+
+.image img{
+  width: 200px;
+  height: 200px;
 }
 
 /*Product View*/
