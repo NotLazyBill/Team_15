@@ -4,9 +4,9 @@ include './functions.php';
 // Gets all Products
 $conn = getDb();
 
-$stmt = $conn->prepare("SELECT id, name, price, image, `desc`, alt_text FROM product WHERE stock > 0");
-$stmt->execute();
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stat = $conn->prepare("SELECT id, name, price, image, `desc`, alt_text FROM product WHERE stock > 0");
+$stat->execute();
+$result = $stat->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <body>
@@ -24,8 +24,8 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 echo "<div class=\"zoom\">";
                 echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
                 echo "</div>";
-                echo "<a href= view_product.php><h3>" . $row["name"] . "</h3></a>";
-                echo "<a href= view_product.php><p>" . $row["desc"] . "</p></a>";
+                echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
+                echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
                 echo "<h6>£" . $row["price"] . "</h6>";
                 echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
                 echo "</div>";
