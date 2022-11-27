@@ -1,7 +1,6 @@
 <?php
-include './functions.php';
 
-$conn = getDb();
+include_once './functions.php';
 
 // Check if user is logged in, else redirect to login
 if (!isset($_SESSION['id'])) {

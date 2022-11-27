@@ -142,6 +142,20 @@ body {
  grid-row: 5; 
 }
 
+#product-sale {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+#product-sale-chk {
+  grid-column: 3;
+  grid-row: 5;
+  margin: 0px 0px;
+  width: 220px;
+  height: 20px;
+}
+
 #submit-product-form {
   width: 100px;
+  grid-row: 6;
 }
