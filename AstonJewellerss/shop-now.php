@@ -11,13 +11,13 @@ loadHeader();
       <div class="shop-now">
         <div id="img">
             <div class="text">
-                <h3>Shop</h3>
+                <a href="shop.php"><h3>Shop</h3></a>
             </div>
             <img class="product-img" src="images/shop_now/woman.jpg"alt="">
         </div>
         <div id="img">
             <div class="text1">
-                <h3>Men's</h3>
+                <a href="mens.php"><h3>Men's</h3></a>
             </div>
             <img src="images/shop_now/man.jpg" alt="">
         </div>

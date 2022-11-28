@@ -166,11 +166,13 @@ h2 {
 
 .sale button,
 #wcollection button {
+  border: 2px solid black;
   border-radius: 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
+  background-color: #e691d4;
 }
 
 #wcollection {
@@ -380,7 +382,7 @@ h6{
   justify-content: flex-end;
 }
 
-.btn{
+.buttons .btn{
   margin-left: 10px;
 }
 
@@ -457,6 +459,7 @@ h6{
   width: 500px;
   padding: 2px;
   justify-content: center;
+  position: relative;
 }
 
 .shop-now img{
@@ -467,13 +470,13 @@ h6{
 .text h3{
   color: white;
   position: absolute;
-  left: 36%;
+  left: 45%;
 }
 
 .text1 h3{
   color: white;
   position: absolute;
-  left: 61%;
+  left: 45%;
 }
 
 

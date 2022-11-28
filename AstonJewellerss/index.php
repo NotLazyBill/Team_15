@@ -33,12 +33,12 @@ include './functions.php';
     <div class="sale">
       <img src="images/rings2.jpg" alt="wintercollection1" />
       <div class="centered">RINGS</div>
-      <div class="bottom-right"><a href="#"><button>Shop Now</button></a></div>
+      <div class="bottom-right"><a href="shop-now.php"><button class="btn">Shop Now</button></a></div>
     </div>
     <div class="sale">
       <img src="images/bracelet.jpg" alt="wintercollection1" />
       <div class="centered">BRACELETS</div>
-      <div class="bottom-right"><a href="#"><button>Shop Now</button></a></div>
+      <div class="bottom-right"><a href="shop-now.php"><button class="btn">Shop Now</button></a></div>
     </div>
   </section>
 
@@ -48,7 +48,7 @@ include './functions.php';
     <h5>Reflect your style this winter</h5>
     <br><br>
     <img src="images/wintercollection1.jpg" alt="wintercollection1" />
-    <button>Explore Now</button>
+    <button class="btn"><a href="shop-now.php">Explore Now</a></button>
 
     <img src="images/wintercollection2.jpg" alt="wintercollection1" />
 
