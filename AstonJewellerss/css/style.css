@@ -441,6 +441,43 @@ h6{
   justify-content: flex-end;
 }
 
+/*Shop Now Page*/
+
+.shop-now{
+  margin: 20px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: normal;
+  height: 670px;
+  width: 1000px;
+}
+
+#img{
+  height: 670px;
+  width: 500px;
+  padding: 2px;
+  justify-content: center;
+}
+
+.shop-now img{
+  height: 100%;
+  width: 100%;
+}
+
+.text h3{
+  color: white;
+  position: absolute;
+  left: 36%;
+}
+
+.text1 h3{
+  color: white;
+  position: absolute;
+  left: 61%;
+}
+
+
+
 /*Footer*/
 
 .footer {
