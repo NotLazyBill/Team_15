@@ -69,6 +69,11 @@ if (isset($_POST['submit-product-form'])) {
     ]);
 }
 
+// Get values for editing products table
+$stat = $conn->prepare("SELECT id, name, price, type, image, `desc`, alt_text, stock, sale FROM product");
+$stat->execute();
+$result = $stat->fetchAll(PDO::FETCH_ASSOC);
+
 // HTML frontend
 echo '
 
@@ -115,6 +120,46 @@ echo '
 
             <button id="submit-product-form" name="submit-product-form">Add product</button>
       </form>
+    </li>
+    </ul>
+    <ul class="flex cards">
+    <li>
+        <h2>Edit existing product</h2>
+        <div id="table-wrapper">
+            <div id="table-scroll">
+                <table id="existing-products" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price (£)</th>
+                        <th>Type</th>
+                        <th>Image URL</th>
+                        <th>Description</th>
+                        <th>Alt text</th>
+                        <th>Stock</th>
+                        <th>Sale?</th>
+                    </tr>
+                </thead>
+                <tbody> '?>
+                    <?php foreach ($result as $row) { ?>
+                    <tr id="<?php echo $row["id"]; ?>">
+                    <td contenteditable='true'><?php echo $row["id"]; ?></td>
+                    <td contenteditable='true'><?php echo $row["name"]; ?></td>
+                    <td contenteditable='true'><?php echo $row["price"]; ?></td>
+                    <td contenteditable='true'><?php echo $row["type"]; ?></td>
+                    <td contenteditable='true'><?php echo $row["image"]; ?></td>
+                    <td contenteditable='true'><?php echo $row["desc"]; ?></td>
+                    <td contenteditable='true'><?php echo $row["alt_text"]; ?></td>
+                    <td contenteditable='true'><?php echo $row["stock"]; ?></td>
+                    <td contenteditable='true'><?php echo $row["sale"]; ?></td>
+                    </tr>
+                    <?php } echo '
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <button id="apply-edits" name="apply-edits">Apply changes</button>
     </li>
     </ul>
 </div>

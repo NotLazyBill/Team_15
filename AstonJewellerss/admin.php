@@ -21,6 +21,7 @@ if (!$_SESSION['admin']) {
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'>
   <link rel="stylesheet" href="./css/admin.css">
+  <script defer src="./js/main.js"></script>
 </head>
 <body>
 <div id="viewport">
@@ -56,11 +57,11 @@ if (!$_SESSION['admin']) {
         $page = $_GET['page'];
 
         // Load products
-        if ($_GET['page'] == "products") { include './admin-pages/products.php'; }
+        if ($page == "products") { include './admin-pages/products.php'; }
         // Load orders
-        elseif ($_GET['page'] == "orders") { include './admin-pages/orders.php'; }
+        elseif ($page == "orders") { include './admin-pages/orders.php'; }
         // Load customers
-        elseif ($_GET['page'] == "customers") { include './admin-pages/customers.php'; }
+        elseif ($page == "customers") { include './admin-pages/customers.php'; }
       }
       ?>
     </div>

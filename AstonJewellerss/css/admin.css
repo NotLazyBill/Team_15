@@ -159,3 +159,30 @@ body {
   width: 100px;
   grid-row: 6;
 }
+
+#table-wrapper {
+  position:relative;
+}
+
+#table-scroll {
+  height:250px;
+  overflow:auto;  
+  margin: 5px;
+}
+
+#table-wrapper table thead th .text {
+  position:absolute;   
+  top:-20px;
+  z-index:2;
+  height:20px;
+  width:35%;
+}
+
+#apply-edits {
+  color: black;
+  border: none;
+  height: 25px;
+  font-size: 15px;
+  margin: 5px;
+  float: right;
+}
