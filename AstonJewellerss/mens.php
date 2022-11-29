@@ -73,8 +73,9 @@ if (isset($_GET['product'])) {
       echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
       echo "<h6>£" . $row["price"] . "</h6>";
       echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
-      echo "</div></div>";
-    } 
+      echo "</div>";
+    }
+    echo "</div>";
   } ?>
   <!-- End of bracelets -->
 
@@ -93,8 +94,9 @@ if (isset($_GET['product'])) {
       echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
       echo "<h6>£" . $row["price"] . "</h6>";
       echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
-      echo "</div></div>";
-    } 
+      echo "</div>";
+    }
+    echo "</div>";
   } ?>
   <!-- End of chains -->
 
@@ -113,8 +115,9 @@ if (isset($_GET['product'])) {
       echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
       echo "<h6>£" . $row["price"] . "</h6>";
       echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
-      echo "</div></div>";
-    } 
+      echo "</div>";
+    }
+    echo "</div>";
   } ?>
   <!-- End of earrings -->
 
@@ -133,8 +136,9 @@ if (isset($_GET['product'])) {
       echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
       echo "<h6>£" . $row["price"] . "</h6>";
       echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
-      echo "</div></div>";
+      echo "</div>";
     } 
+    echo "</div>";
   } ?>
     <!-- End of rings -->
 
@@ -153,8 +157,9 @@ if (isset($_GET['product'])) {
         echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
         echo "<h6>£" . $row["price"] . "</h6>";
         echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
-        echo "</div></div>";
-      } 
+        echo "</div>";
+      }
+      echo "</div>";
     } ?>
   <!-- End of watches -->
 </body>
