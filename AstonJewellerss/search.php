@@ -22,6 +22,7 @@ if (isset($_GET["q"])) {
 
 <body>
     <?php loadHeader(); ?>
+     <div class="c">
     <main>
         <form method="GET">
             <br>
@@ -50,5 +51,7 @@ if (isset($_GET["q"])) {
         }
         ?>
     </main>
+   <footer>
     <?php loadFooter(); ?>
+    </footer>
 </body>
