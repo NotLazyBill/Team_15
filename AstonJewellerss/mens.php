@@ -1,6 +1,8 @@
 <?php
 include './functions.php';
 
+$conn = getDb();
+
 $product = "";
 if (isset($_GET['product'])) {
   $product = $_GET['product'];
@@ -57,97 +59,105 @@ if (isset($_GET['product'])) {
   <?php } ?>
 
   <!-- Display bracelets -->
-  <?php if ($product == "bracelets") { ?>
-    <div class="gallery">
+  <?php if ($product == "bracelets") { 
+    $result = getProductRows($conn, 6);
 
-      <div class="content">
-        <div class="zoom">
-          <img src="images/shop/bracelets/guardian-angel-bracelet.jpg" alt="guardian-angel-bracelet" />
-        </div>
-        <h3>Bracelet</h3>
-        <p>not mens</p>
-        <h6>£17.00</h6>
-        <button class="btn my-3" >Add to Basket <i class="fa fa-shopping-cart"></i></button>
-      </div>
+    echo "<div class=\"gallery\">";
 
-    </div>
-  <?php } ?>
+    foreach($result as $row) {
+      echo "<div class=\"content\">";
+      echo "<div class=\"zoom\">";
+      echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
+      echo "</div>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
+      echo "<h6>£" . $row["price"] . "</h6>";
+      echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
+      echo "</div></div>";
+    } 
+  } ?>
   <!-- End of bracelets -->
 
   <!-- Display chains -->
-  <?php if ($product == "chains") { ?>
-    <div class="gallery">
+  <?php if ($product == "chains") { 
+    $result = getProductRows($conn, 7);
 
-      <div class="content">
-        <div class="zoom">
-          <img src="images/shop/necklaces/gold-heart-necklace.jpg" alt="gold-heart-necklace" />
-        </div>
-        <h3>Chain</h3>
-        <p>not a chain</p>
-        <h6>£18.00</h6>
-        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
-      </div>
+    echo "<div class=\"gallery\">";
 
-    </div>
-  <?php } ?>
+    foreach($result as $row) {
+      echo "<div class=\"content\">";
+      echo "<div class=\"zoom\">";
+      echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
+      echo "</div>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
+      echo "<h6>£" . $row["price"] . "</h6>";
+      echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
+      echo "</div></div>";
+    } 
+  } ?>
   <!-- End of chains -->
 
   <!-- Display earrings -->
-  <?php if ($product == "earrings") { ?>
-    <div class="gallery">
+  <?php if ($product == "earrings") {
+    $result = getProductRows($conn, 8);
 
-      <div class="content">
-        <div class="zoom">
-          <img src="images/shop/earrings/emerald-gold-hoop-earrings.jpg" alt="emerald-gold-hoop-earrings" />
-        </div>
-        <h3>Earrings</h3>
-        <p>not mens</p>
-        <h6>£24.00</h6>
-        <button class="btn my-3">Add to Basket <i class="fa fa-shopping-cart"></i></button>
-      </div>
+    echo "<div class=\"gallery\">";
 
-    </div>
-  <?php } ?>
+    foreach($result as $row) {
+      echo "<div class=\"content\">";
+      echo "<div class=\"zoom\">";
+      echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
+      echo "</div>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
+      echo "<h6>£" . $row["price"] . "</h6>";
+      echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
+      echo "</div></div>";
+    } 
+  } ?>
   <!-- End of earrings -->
 
-    <!-- Display rings -->
-  <?php if ($product == "rings") { ?>
-    <div class="gallery">
+  <!-- Display rings -->
+  <?php if ($product == "rings") {
+    $result = getProductRows($conn, 9);
 
-      <div class="content">
-        <div class="zoom">
-          <img src="images/shop/bracelets/guardian-angel-bracelet.jpg" alt="guardian-angel-bracelet" />
-        </div>
-        <h3>Ring</h3>
-        <p>not a ring</p>
-        <h6>£17.00</h6>
-        <button class="btn my-3" >Add to Basket <i class="fa fa-shopping-cart"></i></button>
-      </div>
+    echo "<div class=\"gallery\">";
 
-    </div>
-  <?php } ?>
+    foreach($result as $row) {
+      echo "<div class=\"content\">";
+      echo "<div class=\"zoom\">";
+      echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
+      echo "</div>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
+      echo "<h6>£" . $row["price"] . "</h6>";
+      echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
+      echo "</div></div>";
+    } 
+  } ?>
     <!-- End of rings -->
 
     <!-- Display watches -->
-    <?php if ($product == "watches") { ?>
-    <div class="gallery">
+    <?php if ($product == "watches") {
+      $result = getProductRows($conn, 10);
 
-      <div class="content">
-        <div class="zoom">
-          <img src="images/shop/bracelets/guardian-angel-bracelet.jpg" alt="guardian-angel-bracelet" />
-        </div>
-        <h3>Watch</h3>
-        <p>not a watch</p>
-        <h6>£17.00</h6>
-        <button class="btn my-3" >Add to Basket <i class="fa fa-shopping-cart"></i></button>
-      </div>
-
-    </div>
-  <?php } ?>
+      echo "<div class=\"gallery\">";
+  
+      foreach($result as $row) {
+        echo "<div class=\"content\">";
+        echo "<div class=\"zoom\">";
+        echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
+        echo "</div>";
+        echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
+        echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
+        echo "<h6>£" . $row["price"] . "</h6>";
+        echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
+        echo "</div></div>";
+      } 
+    } ?>
   <!-- End of watches -->
-
 </body>
-
 </html>
 
 <?php

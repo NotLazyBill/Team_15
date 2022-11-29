@@ -4,7 +4,7 @@ include './functions.php';
 // Gets all Products
 $conn = getDb();
 
-$stat = $conn->prepare("SELECT id, name, price, image, `desc`, alt_text FROM product WHERE stock > 0");
+$stat = $conn->prepare("SELECT id, name, price, image, `desc`, alt_text FROM product WHERE stock > 0 AND sale=1");
 $stat->execute();
 $result = $stat->fetchAll(PDO::FETCH_ASSOC);
 ?>

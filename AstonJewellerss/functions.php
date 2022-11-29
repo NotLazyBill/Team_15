@@ -3,8 +3,6 @@ include './secrets.php';
 
 session_start();
 
-
-
 function getDb()
 {
     // This connects to the Database using the hidden credentials
@@ -12,6 +10,13 @@ function getDb()
     $conn = new PDO("mysql:host=$db_host;dbname=$db_db", $db_user, $db_pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $conn;
+}
+
+function getProductRows($conn, $type)
+{
+  $stat = $conn->prepare("SELECT id, name, price, image, `desc`, alt_text FROM product WHERE stock > 0 AND type=$type");
+  $stat->execute();
+  return $stat->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function loadFooter()
