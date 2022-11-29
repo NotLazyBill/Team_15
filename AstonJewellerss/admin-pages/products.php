@@ -2,38 +2,38 @@
 
 $conn = getDb();
 
-function getImageURL(int $type) {
+function getImageURL(string $type) {
     $url = "";
 
     switch ($type) {
-        case 1:
+        case "women-bracelet":
             $url = "images/shop/bracelets/";
             break;
-        case 2:
+        case "women-necklace":
             $url = "images/shop/necklaces/";
             break;
-        case 3:
+        case "women-earrings":
             $url = "images/shop/earrings/";
             break;
-        case 4:
+        case "women-ring":
             $url = "images/shop/rings/";
             break;
-        case 5:
+        case "women-watch":
             $url = "images/shop/watches/";
             break;
-        case 6:
+        case "men-bracelet":
             $url = "images/mens/bracelets/";
             break;
-        case 7:
+        case "men-chain":
             $url = "images/mens/chains/";
             break;
-        case 8:
+        case "men-earrings":
             $url = "images/mens/earrings/";
             break;
-        case 9:
+        case "men-ring":
             $url = "images/mens/rings/";
             break;
-        case 10:
+        case "men-watch":
             $url = "images/mens/watches/";
             break;
     }
@@ -44,7 +44,7 @@ function getImageURL(int $type) {
 // Check if post request was made to add new item
 if (isset($_POST['submit-product-form'])) {
 
-    $product_type = (int)$_POST['product-type'];
+    $product_type = $_POST['product-type'];
     $sale = (isset($_POST['product-sale']) ? 0 : 1);
 
     $stat = $conn->prepare("INSERT INTO product(name, price, type, image, `desc`, alt_text, created_at, updated_at, stock, sale)
@@ -96,16 +96,16 @@ echo '
 
             <label for="product-type">Type:</label>
             <select name="product-type" id="product-type">
-                <option value="1">Women&apos;s bracelet</option>
-                <option value="2">Women&apos;s necklace</option>
-                <option value="3">Women&apos;s earrings</option>
-                <option value="4">Women&apos;s ring</option>
-                <option value="5">Women&apos;s watch</option>
-                <option value="6">Men&apos;s bracelet</option>
-                <option value="7">Men&apos;s chain</option>
-                <option value="8">Men&apos;s earrings</option>
-                <option value="9">Men&apos;s ring</option>
-                <option value="10">Men&apos;s watch</option>
+                <option value="women-bracelet">Women&apos;s bracelet</option>
+                <option value="women-necklace">Women&apos;s necklace</option>
+                <option value="women-earrings">Women&apos;s earrings</option>
+                <option value="women-ring">Women&apos;s ring</option>
+                <option value="women-watch">Women&apos;s watch</option>
+                <option value="men-bracelet">Men&apos;s bracelet</option>
+                <option value="men-chain">Men&apos;s chain</option>
+                <option value="men-earrings">Men&apos;s earrings</option>
+                <option value="men-ring">Men&apos;s ring</option>
+                <option value="men-watch">Men&apos;s watch</option>
             </select>
 
             <div id="desc-box">

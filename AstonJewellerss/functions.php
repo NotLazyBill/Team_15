@@ -14,8 +14,8 @@ function getDb()
 
 function getProductRows($conn, $type)
 {
-  $stat = $conn->prepare("SELECT id, name, price, image, `desc`, alt_text FROM product WHERE stock > 0 AND type=$type");
-  $stat->execute();
+  $stat = $conn->prepare("SELECT id, name, price, image, `desc`, alt_text, `type` FROM product WHERE stock > 0 AND type=:type");
+  $stat->execute(['type' => $type]);
   return $stat->fetchAll(PDO::FETCH_ASSOC);
 }
 

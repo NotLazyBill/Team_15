@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2022 at 12:21 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Nov 29, 2022 at 09:04 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -67,15 +67,15 @@ CREATE TABLE `product` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `price` float NOT NULL,
-  `type` int(11) NOT NULL,
+  `type` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `desc` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `alt_text` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   `stock` int(11) NOT NULL,
-  `sale` tinyint(4) DEFAULT 0
-  `gender` varchar(11) NOT NULL,
+  `sale` tinyint(4) DEFAULT 0,
+  `gender` varchar(10) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
@@ -83,23 +83,55 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `price`, `type`, `image`, `desc`, `alt_text`, `created_at`, `updated_at`, `stock`, `sale`, `gender`) VALUES
-(0, 'Earrings', 12, 1, 'images/diamondearrings.jpg', 'Round Cut Stud Earrings 6mm-Silver', 'information about the product', '2022-11-22', '2022-11-23', 5, `0`, `female`),
-(1, 'Earrings', 18, 1, 'images/pearlearrings.jpg', 'Gold Huggie Pearl Drop Earrings', 'information about the product', '2022-11-22', '2022-11-23', 6, `0`, `female`),
-(2, 'Earrings', 14, 1, 'images/pearlearrings2.jpg', 'Ines Pearl And Cz Drop Earrings-Rose Gold', 'information about the product', '2022-11-22', '2022-11-23', 3, `0`, `female`),
-(3, 'Earrings', 11, 1, 'images/starearrings.jpg', 'Starburst Small Hoop Earrings-Rose Gold', 'information about the product', '2022-11-22', '2022-11-23', 9, `0`, `female`),
-(4, 'Necklace', 11, 2, 'images/silverchain.jpg', 'Gold Chuncky Pendant Necklace', 'information about the product', '2022-11-22', '2022-11-23', 7, `0`, `female`),
-(5, 'Necklace', 12, 2, 'images/heartchain.jpg', 'Gold Dimante Necklace', 'information about the product', '2022-11-22', '2022-11-23', 7, `0`, `female`),
-(6, 'Necklace', 9, 2, 'images/pearlchain.jpg', 'Little Sea Shell Necklace', 'information about the product', '2022-11-22', '2022-11-23', 12, `0`, `female`),
-(7, 'Necklace', 10, 2, 'images/salechain.jpg', 'Rose Gold Necklace', 'information about the product', '2022-11-22', '2022-11-23', 15, `0`, `female`),
-(8, 'Ring', 12, 3, 'images/diamondring.jpg', 'Single Diamond Ring', 'information about the product', '2022-11-22', '0000-00-00', 10, `0`, `female`),
-(9, 'Ring', 15, 3, 'images/goldring.jpg', 'Gold Princess Ring', 'information about the product', '2022-11-22', '0000-00-00', 12, `0`, `female`),
-(10, 'Ring', 10, 3, 'images/goldring2.jpg', 'Detailed God Ring', 'information about the product', '2022-11-22', '0000-00-00', 5, `0`, `female`),
-(11, 'Ring', 11, 3, 'images/silverrings.jpg', 'Silver Diamond Ring', 'information about the product', '2022-11-22', '0000-00-00', 13, `0`, `female`),
-(12, 'Bracelet', 15, 4, 'images/salebraclet2.jpg', 'Worded Gold Bracelet', 'information about the product', '2022-11-22', '0000-00-00', 9, `0`, `female`),
-(13, 'Bracelet', 9, 4, 'images/salebraclet3.jpg', 'Silver Bracelet', 'information about the product', '2022-11-22', '0000-00-00', 12, `0`, `female`),
-(14, 'Bracelet', 20, 4, 'images/salebraclet4.jpg', 'Gold Chunky Bracelet', 'information about the product', '2022-11-22', '0000-00-00', 3, `0`, `female`),
-(15, 'Bracelet', 18, 4, 'images/salebraclet5.jpg', 'Patterned Gold Bracelet', 'information about the product', '2022-11-22', '0000-00-00', 7, `0`, `female`);
-
+(1, 'Round Cut Stud Earrings 6mm-Silver', 12, 'women-earrings', 'images/diamondearrings.jpg', '1', 'round-cut-stud-earrings', '2022-11-22', '2022-11-23', 5, 1, 'female'),
+(2, 'Gold Huggie Pearl Drop Earrings', 18, 'women-earrings', 'images/pearlearrings.jpg', '1', 'gold-huggie-pearl-earrings', '2022-11-22', '2022-11-23', 6, 1, 'female'),
+(3, 'Ines Pearl And Cz Drop Earrings-Rose Gold', 14, 'women-earrings', 'images/pearlearrings2.jpg', '1', 'ines-pearl-rose-gold-earrings', '2022-11-22', '2022-11-23', 3, 1, 'female'),
+(4, 'Starburst Small Hoop Earrings-Rose Gold', 11, 'women-earrings', 'images/starearrings.jpg', '1', 'starburst-earrings', '2022-11-22', '2022-11-23', 9, 1, 'female'),
+(5, 'Gold Chuncky Pendant Necklace', 11, 'women-necklace', 'images/silverchain.jpg', '2', 'gold-chunky-necklace', '2022-11-22', '2022-11-23', 7, 1, 'female'),
+(6, 'Gold Dimante Necklace', 12, 'women-necklace', 'images/heartchain.jpg', '2', 'gold-dimante-necklace', '2022-11-22', '2022-11-23', 7, 1, 'female'),
+(7, 'Little Sea Shell Necklace', 9, 'women-necklace', 'images/pearlchain.jpg', '2', 'little-shell-necklace', '2022-11-22', '2022-11-23', 12, 1, 'female'),
+(8, 'Rose Gold Necklace', 10, 'women-necklace', 'images/salechain.jpg', '2', 'rose-gold-necklace', '2022-11-22', '2022-11-23', 15, 1, 'female'),
+(9, 'Single Diamond Ring', 12, 'women-ring', 'images/diamondring.jpg', '3', 'single-diamong-ring', '2022-11-22', '0000-00-00', 10, 1, 'female'),
+(10, 'Gold Princess Ring', 15, 'women-ring', 'images/goldring.jpg', '3', 'gold-princess-ring', '2022-11-22', '0000-00-00', 12, 1, 'female'),
+(11, 'Detailed God Ring', 10, 'women-ring', 'images/goldring2.jpg', '3', 'detailed-gold-ring', '2022-11-22', '0000-00-00', 5, 1, 'female'),
+(12, 'Silver Diamond Ring', 11, 'women-ring', 'images/silverrings.jpg', '3', 'silver-diamond-ring', '2022-11-22', '0000-00-00', 13, 1, 'female'),
+(13, 'Worded Gold Bracelet', 15, 'women-bracelet', 'images/salebraclet2.jpg', '4', 'worded-gold-bracelet', '2022-11-22', '0000-00-00', 9, 1, 'female'),
+(14, 'Silver Bracelet', 9, 'women-bracelet', 'images/salebraclet3.jpg', '4', 'silver-bracelet', '2022-11-22', '0000-00-00', 12, 1, 'female'),
+(15, 'Gold Chunky Bracelet', 20, 'women-bracelet', 'images/salebraclet4.jpg', '4', 'gold-chunky-bracelet', '2022-11-22', '0000-00-00', 3, 1, 'female'),
+(16, 'Patterned Gold Bracelet', 18, 'women-bracelet', 'images/salebraclet5.jpg', '4', 'patterned-gold-bracelet', '2022-11-22', '0000-00-00', 7, 1, 'female'),
+(17, 'Silver Guardian Angel Bracelet', 17, 'women-bracelet', 'images/shop/bracelets/guardian-angel-bracelet.jpg', '4', 'guardian-angel-bracelet', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(18, 'Plain Silver Bracelet', 13, 'women-bracelet', 'images/shop/bracelets/plain-silver-bracelet.jpg', '4', 'plain-silver-bracelet', '2022-11-28', '2022-11-29', 5, 0, 'female'),
+(19, 'Teardrop Shaped Gemstone Silver Bracelet', 25, 'women-bracelet', 'images/shop/bracelets/teardrop-bracelet.jpg', '4', 'teardrop-bracelet', '2022-11-28', '2022-11-29', 11, 0, 'female'),
+(20, 'Plain Silver Bangle', 15, 'women-bracelet', 'images/shop/bracelets/plain-silver-bangle-bracelet.jpg', '4', 'plain-silver-bangle-bracelet', '2022-11-28', '2022-11-29', 5, 0, 'female'),
+(21, 'Silver Butterfly Bracelet', 18, 'women-bracelet', 'images/shop/bracelets/silver-butterfly-bracelet.jpg', '4', 'silver-butterfly-bracelet', '2022-11-28', '2022-11-29', 3, 0, 'female'),
+(22, 'Oval Cut Gemstone Bracelet', 25, 'women-bracelet', 'images/shop/bracelets/oval-cut-gemstone-bracelet.jpg', '4', 'oval-cut-gemstone-bracelet', '2022-11-28', '2022-11-29', 1, 0, 'female'),
+(23, 'Green Amber Square Gemstone Bracelet', 27, 'women-bracelet', 'images/shop/bracelets/green-amber-square-gemstone-bracelet.jpg', '4', 'green-amber-square-gemstone-bracelet', '2022-11-28', '2022-11-29', 10, 0, 'female'),
+(24, 'Gold Heart Necklace', 18, 'women-necklace', 'images/shop/necklaces/gold-heart-necklace.jpg', '2', 'gold-heart-necklace', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(25, 'Gold Four Leaf Clover Necklace', 18, 'women-necklace', 'images/shop/necklaces/gold-four-leaf-clover-necklace.jpg', '2', 'gold-four-leaf-clover-necklace', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(26, '3 Heart Necklace', 22, 'women-necklace', 'images/shop/necklaces/3-heart-necklace.jpg', '2', '3-heart-necklace', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(27, 'Flower with Pearl Necklace', 20, 'women-necklace', 'images/shop/necklaces/flower-pearl-necklace.jpg', '2', 'flower-pearl-necklace', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(28, 'Mermaid Necklace', 20, 'women-necklace', 'images/shop/necklaces/mermaid-necklace.jpg', '2', 'mermaid-necklace', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(29, 'Hollow Heart Necklace', 16, 'women-necklace', 'images/shop/necklaces/hollow-heart-necklace.jpg', '2', 'hollow-heart-necklace', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(30, 'Poppies Necklace', 27, 'women-necklace', 'images/shop/necklaces/poppies-necklace.jpg', '2', 'poppies-necklace', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(31, 'Emerald Gold Hoop Earrings', 24, 'women-earrings', 'images/shop/earrings/emerald-gold-hoop-earrings.jpg', '1', 'emerald-gold-hoop-earrings', '2022-11-28', '2022-11-29', 1, 0, 'female'),
+(32, 'Double Hoop Diamond Earrings', 25, 'women-earrings', 'images/shop/earrings/double-hoop-diamond-earrings.jpg', '1', 'double-hoop-diamond-earrings', '2022-11-28', '2022-11-29', 3, 0, 'female'),
+(33, 'Pearl Earrings', 20, 'women-earrings', 'images/shop/earrings/pearl-earrings.jpg', '1', 'pearl-earrings', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(34, 'Diamond Star Earrings', 27, 'women-earrings', 'images/shop/earrings/diamond-star-earrings.jpg', '1', 'diamond-star-earrings', '2022-11-28', '2022-11-29', 7, 0, 'female'),
+(35, 'Pastel Heart Earrings', 20, 'women-earrings', 'images/shop/earrings/pastel-heart-earrings.jpg', '1', 'pastel-heart-earrings', '2022-11-28', '2022-11-29', 1, 0, 'female'),
+(36, 'Diamond & Gold Round Earrings', 30, 'women-earrings', 'images/shop/earrings/diamond-gold-round-earrings.jpg', '1', 'diamond-gold-round-earrings', '2022-11-28', '2022-11-29', 7, 0, 'female'),
+(37, 'Flower Earrings', 25, 'women-earrings', 'images/shop/earrings/flower-earrings.jpg', '1', 'flower-earrings', '2022-11-28', '2022-11-29', 11, 0, 'female'),
+(38, 'Purple Gemstone Ring', 25, 'women-ring', 'images/shop/rings/purple-gemstone-ring.jpg', '3', 'purple-gemstone-ring', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(39, 'Black Diamond Ring', 25, 'women-ring', 'images/shop/rings/black-diamond-ring.jpg', '3', 'black-diamond-ring', '2022-11-28', '2022-11-29', 4, 0, 'female'),
+(40, 'Gold & Black Heart Ring', 20, 'women-ring', 'images/shop/rings/gold-black-heart-ring.jpg', '3', 'gold-black-heart-ring', '2022-11-28', '2022-11-29', 3, 0, 'female'),
+(41, 'Infinite Hearts Ring', 25, 'women-ring', 'images/shop/rings/infinite-hearts-ring.jpg', '3', 'infinite-hearts-ring', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(42, 'Silver Love Ring', 25, 'women-ring', 'images/shop/rings/silver-love-ring.jpg', '3', 'silver-love-ring', '2022-11-28', '2022-11-29', 15, 0, 'female'),
+(43, 'Joined Hearts Ring', 27, 'women-ring', 'images/shop/rings/joined-hearts-ring.jpg', '3', 'joined-hearts-ring', '2022-11-28', '2022-11-29', 12, 0, 'female'),
+(44, 'Pink & Gold Bracelet Watch', 40, 'women-watch', 'images/shop/watches/pink-gold-bracelet-watch.jpg', '5', 'pink-gold-bracelet-watch', '2022-11-28', '2022-11-29', 9, 0, 'female'),
+(45, 'Minimalistic Gold & White Watch', 45, 'women-watch', 'images/shop/watches/minimalistic-gold-white-watch.jpg', '5', 'minimalistic-gold-white-watch', '2022-11-28', '2022-11-29', 6, 0, 'female'),
+(46, 'Silver & Grey Watch', 38, 'women-watch', 'images/shop/watches/silver-grey-watch.jpg', '5', 'silver-grey-watch', '2022-11-28', '2022-11-29', 8, 0, 'female'),
+(47, 'Casual Timeless Watch', 35, 'women-atch', 'images/shop/watches/casual-timeless-watch.jpg', '5', 'casual-timeless-watch', '2022-11-28', '2022-11-29', 2, 0, 'female'),
+(48, 'Rose Gold Stars Watch', 45, 'women-watch', 'images/shop/watches/rose-gold-stars-watch.jpg', '5', 'rose-gold-stars-watch', '2022-11-28', '2022-11-29', 12, 0, 'female'),
+(49, 'Wooden Strap Watch', 38, 'women-watch', 'images/shop/watches/wooden-strap-watch.jpg', '5', 'wooden-strap-watch', '2022-11-28', '2022-11-29', 9, 0, 'female');
 
 -- --------------------------------------------------------
 
@@ -131,16 +163,6 @@ CREATE TABLE `users` (
   `fname` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `lname` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `admin`, `email`, `password`, `join_date`, `fname`, `lname`) VALUES
-(1, 'dfggdfgdf', 0, 'dfgdfgdf', 'dgdfgdf', '0000-00-00', 'dgfdgdf', 'dfgdfgdf'),
-(2, 'dfgdfgdf', 0, 'dfgdfgdf', 'dfgdfgdf', '0000-00-00', 'fgfdgfd', 'dfgfdgdf'),
-(3, 'dfgdfg', 0, 'dfgdfg', 'dfgdfgdf', '0000-00-00', 'dfgdfgdf', 'dfgdfgdf'),
-(4, 'sfaasfa', 1, 'afdawsfaw', '$2y$10$P6GJeIts8EjlSQuBGZGKv.hQyfYOKZ.kx0/nqm13y02oshreKiFsC', '2022-11-25', 'test', 'dasdas');
 
 -- --------------------------------------------------------
 
@@ -179,24 +201,19 @@ CREATE TABLE `wishlist` (
 -- Indexes for table `basket`
 --
 ALTER TABLE `basket`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `order`
 --
 ALTER TABLE `order`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `order_details`
 --
 ALTER TABLE `order_details`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`),
-  ADD KEY `order_id` (`order_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product`
@@ -208,9 +225,7 @@ ALTER TABLE `product`
 -- Indexes for table `reviews`
 --
 ALTER TABLE `reviews`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -222,16 +237,13 @@ ALTER TABLE `users`
 -- Indexes for table `user_address`
 --
 ALTER TABLE `user_address`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -259,7 +271,8 @@ ALTER TABLE `order_details`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+COMMIT;
 
 --
 -- AUTO_INCREMENT for table `reviews`
@@ -271,7 +284,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user_address`
@@ -284,50 +297,6 @@ ALTER TABLE `user_address`
 --
 ALTER TABLE `wishlist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `basket`
---
-ALTER TABLE `basket`
-  ADD CONSTRAINT `basket_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
-  ADD CONSTRAINT `basket_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `order`
---
-ALTER TABLE `order`
-  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `order_details`
---
-ALTER TABLE `order_details`
-  ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `order` (`id`),
-  ADD CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
-
---
--- Constraints for table `reviews`
---
-ALTER TABLE `reviews`
-  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
-  ADD CONSTRAINT `reviews_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `user_address`
---
-ALTER TABLE `user_address`
-  ADD CONSTRAINT `user_address_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `wishlist`
---
-ALTER TABLE `wishlist`
-  ADD CONSTRAINT `wishlist_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
-  ADD CONSTRAINT `wishlist_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

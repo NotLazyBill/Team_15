@@ -60,7 +60,7 @@ if (isset($_GET['product'])) {
 
   <!-- Display bracelets -->
   <?php if ($product == "bracelets") {
-    $result = getProductRows($conn, 1);
+    $result = getProductRows($conn, "women-bracelet");
 
     echo "<div class=\"gallery\">";
 
@@ -69,8 +69,8 @@ if (isset($_GET['product'])) {
       echo "<div class=\"zoom\">";
       echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
       echo "</div>";
-      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
-      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h5>" . $row["name"] . "</h5></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["type"] . "</p></a>";
       echo "<h6>£" . $row["price"] . "</h6>";
       echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
       echo "</div>";
@@ -81,7 +81,7 @@ if (isset($_GET['product'])) {
 
   <!-- Display necklaces -->
   <?php if ($product == "necklaces") {
-    $result = getProductRows($conn, 2);
+    $result = getProductRows($conn, "women-necklace");
 
     echo "<div class=\"gallery\">";
 
@@ -90,8 +90,8 @@ if (isset($_GET['product'])) {
       echo "<div class=\"zoom\">";
       echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
       echo "</div>";
-      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
-      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h5>" . $row["name"] . "</h5></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["type"] . "</p></a>";
       echo "<h6>£" . $row["price"] . "</h6>";
       echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
       echo "</div>";
@@ -102,7 +102,7 @@ if (isset($_GET['product'])) {
 
   <!-- Display earrings -->
   <?php if ($product == "earrings") {
-    $result = getProductRows($conn, 3);
+    $result = getProductRows($conn, "women-earrings");
 
     echo "<div class=\"gallery\">";
 
@@ -111,8 +111,8 @@ if (isset($_GET['product'])) {
       echo "<div class=\"zoom\">";
       echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
       echo "</div>";
-      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
-      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h5>" . $row["name"] . "</h5></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["type"] . "</p></a>";
       echo "<h6>£" . $row["price"] . "</h6>";
       echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
       echo "</div>";
@@ -123,7 +123,7 @@ if (isset($_GET['product'])) {
 
   <!-- Display rings -->
   <?php if ($product == "rings") {
-    $result = getProductRows($conn, 4);
+    $result = getProductRows($conn, "women-ring");
 
     echo "<div class=\"gallery\">";
 
@@ -132,8 +132,8 @@ if (isset($_GET['product'])) {
       echo "<div class=\"zoom\">";
       echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
       echo "</div>";
-      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
-      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h5>" . $row["name"] . "</h5></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["type"] . "</p></a>";
       echo "<h6>£" . $row["price"] . "</h6>";
       echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
       echo "</div>";
@@ -144,7 +144,7 @@ if (isset($_GET['product'])) {
 
   <!-- Display watches -->
   <?php if ($product == "watches") {
-    $result = getProductRows($conn, 5);
+    $result = getProductRows($conn, "women-watch");
 
     echo "<div class=\"gallery\">";
 
@@ -153,8 +153,8 @@ if (isset($_GET['product'])) {
       echo "<div class=\"zoom\">";
       echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
       echo "</div>";
-      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h3>" . $row["name"] . "</h3></a>";
-      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["desc"] . "</p></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h5>" . $row["name"] . "</h5></a>";
+      echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["type"] . "</p></a>";
       echo "<h6>£" . $row["price"] . "</h6>";
       echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
       echo "</div>";
