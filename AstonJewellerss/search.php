@@ -55,3 +55,4 @@ if (isset($_GET["q"])) {
     <?php loadFooter(); ?>
     </footer>
 </body>
+    </html>
