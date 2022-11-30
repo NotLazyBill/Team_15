@@ -100,7 +100,8 @@ body {
   margin: 10px;
 }
 
-.add-product-form {
+.add-product-form,
+.edit-product-form {
   margin: 10px;
   color:rgb(173, 175, 194);
   display: grid;
@@ -110,14 +111,18 @@ body {
   margin: 10px;
 }
 
-.add-product-form > label  {
+.add-product-form > label,
+.edit-product-form > label   {
   grid-column: 1;
   grid-row: auto;
 }
 
 .add-product-form > input,
 .add-product-form > button,
-.add-product-form > select {
+.add-product-form > select,
+.edit-product-form > input,
+.edit-product-form > button,
+.edit-product-form > select {
   grid-column: 2;
   grid-row: auto;
   color: black;
@@ -126,7 +131,8 @@ body {
   font-size: 15px;
 }
 
-.add-product-form textarea {
+.add-product-form textarea,
+.edit-product-form textarea {
  min-height: calc(100% - 2em);
  width: 100%;
  border: none;
@@ -137,7 +143,8 @@ body {
  grid-row: span 3;
 }
 
-.add-product-form > button {
+.add-product-form > button,
+.edit-product-form > button {
  grid-column: 3;
  grid-row: 5; 
 }
@@ -178,11 +185,6 @@ body {
   width:35%;
 }
 
-#apply-edits {
+#edit {
   color: black;
-  border: none;
-  height: 25px;
-  font-size: 15px;
-  margin: 5px;
-  float: right;
 }
