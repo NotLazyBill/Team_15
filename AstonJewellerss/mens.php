@@ -13,6 +13,8 @@ if (isset($_GET['product'])) {
 <html lang="en">
 <body>
   <?php loadHeader(); ?>
+   <div class="c">
+    <main>
   <!-- Show store categories when no product is selected (default) -->
   <?php if (!isset($_GET['product'])) { ?>
     <div class="wrapper">
@@ -162,9 +164,7 @@ if (isset($_GET['product'])) {
       echo "</div>";
     } ?>
   <!-- End of watches -->
+</main>
+    <?php loadFooter(); ?>
 </body>
 </html>
-
-<?php
-loadFooter();
-?>
