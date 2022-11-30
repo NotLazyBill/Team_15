@@ -10,18 +10,15 @@ include './functions.php';
 <main>
   <div class="left">
     <section id="style">
-      <h2>Shop By Style</h2>
+      <h2>Shop Our Styles</h2>
       <div class="style">
-        <img src="images/gold.jpg" alt="style-gold" />
-        <a href="#">GOLD</a>
+         <img src="images/gold.jpg" alt="style-gold" />GOLD
       </div>
       <div class="style">
-        <img src="images/pearl.jpg" alt="style-pearl" />
-        <a href="#">PEARL</a>
+       <img src="images/pearl.jpg" alt="style-pearl" />PEARL
       </div>
       <div class="">
-        <img src="images/silver.jpg" alt="style-silver" />
-        <a href="#">SILVER</a>
+        <img src="images/silver.jpg" alt="style-silver" />SILVER
       </div>
     </section>
 
@@ -33,12 +30,12 @@ include './functions.php';
     <div class="sale">
       <img src="images/rings2.jpg" alt="wintercollection1" />
       <div class="centered">RINGS</div>
-      <div class="bottom-right"><a href="shop-now.php"><button class="btn">Shop Now</button></a></div>
+      <div class="bottom-right"><a href="sales.php"><button class="btn">Shop Now</button></a></div>
     </div>
     <div class="sale">
       <img src="images/bracelet.jpg" alt="wintercollection1" />
       <div class="centered">BRACELETS</div>
-      <div class="bottom-right"><a href="shop-now.php"><button class="btn">Shop Now</button></a></div>
+      <div class="bottom-right"><a href="sales.php"><button class="btn">Shop Now</button></a></div>
     </div>
   </section>
 
