@@ -9,11 +9,11 @@ include './functions.php';
   <main>
     <section id="vision">
       <h3> Our Vision</h3>
-      <li>Our company started a couple of years back when we realised how expensive the jewellery market and how much it
+      <li>Our company started a couple of years back when we realised how expensive the jewellery market is and how much it
         can affect peoples choice when buying jewellery, especially students.
         Nowadays, jewellery has become more popular and fashionable, however, it can be very expensive which is off-putting.
         We do not want people to have to choose lower quality jewellery because it is cheaper and we do not want to compromise or limit their taste.
-        So we came up with Aston Jewellers. Our vision is to sell high-quality jewellery to students and other people who want to look good but do
+        As a result, we came up with Aston Jewellers. Our vision is to sell high-quality jewellery to students and other people who want to look good but do
         not want to spend a lot of money.</li>
       <li>We understand the importance of wanting to look and feel good, and we want other people to have the same experiences. Therefore, Aston Jewellers is here to
         sell high-quality, fashionable and reasonably priced jewellery to students as we want them to go out and feel good about what they are wearing without worrying about the costs of things.</li>
