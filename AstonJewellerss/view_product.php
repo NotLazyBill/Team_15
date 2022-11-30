@@ -37,7 +37,7 @@ $the_product = $result[0];
         <div class="product">
           <?php echo "<h2>" . $the_product["name"] . "</h2>"; 
                 echo "<p>" . $the_product["desc"] . "</p>"; 
-                echo "<span>£" . $the_product["price"] . ".00</span>"; ?>
+                echo "<span>£" . $the_product["price"] . "</span>"; ?>
           <div class="product-buttons">
             <button type="submit" class="btn btn-warning my-3" name="add">Add to Basket <i class="fa fa-shopping-cart"></i></button>
             <button type="submit" class="btn btn-danger my-3" name="add"><i class="fa fa-heart-o"></i></button>
