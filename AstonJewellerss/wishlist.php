@@ -6,7 +6,8 @@ include './functions.php';
 <html lang="en">
 <body>
   <?php loadHeader(); ?>
-  <main>
+   <div class="c">
+    <main>
     <div class="container mt-3 mx-auto">
       <div class="row justify-content-center">
         <div class="col-md-10">
@@ -30,7 +31,6 @@ include './functions.php';
       </div>
     </div>
   </main>
-  <?php loadFooter(); ?>
+    <?php loadFooter(); ?>
 </body>
-
 </html>
