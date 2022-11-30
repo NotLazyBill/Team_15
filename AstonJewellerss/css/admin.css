@@ -138,9 +138,14 @@ body {
  border: none;
 }
 
-#desc-box {
+#desc-box,
+#address {
  grid-column: 3;
  grid-row: span 3;
+}
+
+#address > input {
+  width: 80%;
 }
 
 .add-product-form > button,
@@ -162,9 +167,27 @@ body {
   height: 20px;
 }
 
+#admin {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+#admin-chk {
+  grid-column: 3;
+  grid-row: 4;
+  margin: 0px 0px;
+  width: 220px;
+  height: 20px;
+}
+
 #submit-product-form {
   width: 100px;
   grid-row: 6;
+}
+
+#submit-user-form {
+  width: 100px;
+  grid-row: 5;
 }
 
 #table-wrapper {
@@ -185,6 +208,7 @@ body {
   width:35%;
 }
 
-#edit {
+#edit,
+#view {
   color: black;
 }

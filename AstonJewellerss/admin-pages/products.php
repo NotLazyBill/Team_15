@@ -75,7 +75,7 @@ if (isset($_POST['submit-product-form'])) {
         $delete->execute(['id' => $_GET['edit']]);
         header("Location: admin.php?page=products");
     }
-}
+} 
 
 // Get values for editing products table
 $stat = $conn->prepare("SELECT id, name, price, type, image, `desc`, alt_text, stock, sale FROM product");
@@ -216,13 +216,13 @@ echo '
                 <label for=\"product-desc\">Description:</label>
                 <textarea name=\"product-desc\" id=\"product-desc\" required>$desc</textarea>
                 <label for=\"product-img\">Select image:</label>
-                <input type=\"file\" id=\"product-img\" name=\"product-img\" accept=\"image/*\" required>
+                <input type=\"file\" id=\"product-img\" name=\"product-img\" accept=\"image/*\">
             </div>
 
             <label for=\"product-sale\" id=\"product-sale\">Add to sale?:</label>
             <input type=\"checkbox\" id=\"product-sale-chk\" name=\"product-sale-chk\" value=\"sale\">
 
-            <button id=\"submit-product-form\" name=\"submit-product-form\">Add product</button>
+            <button id=\"submit-product-form\" name=\"submit-product-form\">Edit product</button>
       </form>
     </li>
     </ul>
