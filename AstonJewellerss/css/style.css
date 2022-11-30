@@ -16,6 +16,8 @@ h5 {
   color: #d538b3;
 }
 
+/*Navbar*/
+
 h2 {
   width: 100%;
   text-align: center;
@@ -94,6 +96,8 @@ h2 {
   color: white;
 }
 
+/*Homepage*/
+
 .left {
   background-color: #d9b3db;
   width: 30%;
@@ -103,27 +107,13 @@ h2 {
   text-align: center;
   flex-wrap: wrap;
   padding-top: 40px;
+  font-size: x-large;
 }
 
 .left img {
   width: 60%;
   height: 80%;
   padding-bottom: 40px;
-}
-
-.left a {
-  color: rgb(66, 66, 66);
-  text-decoration: none;
-  font-size: x-large;
-}
-
-.left a:hover {
-  text-decoration: underline;
-  color: #d538b3;
-}
-
-.left a:active {
-  text-decoration: underline;
 }
 
 #sale {
@@ -164,17 +154,6 @@ h2 {
   right: 16px;
 }
 
-.sale button,
-#wcollection button {
-  border: 2px solid black;
-  border-radius: 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  background-color: #e691d4;
-}
-
 #wcollection {
   padding-top: 40px;
   text-align: center;
@@ -186,6 +165,18 @@ h2 {
   width: 25%;
   height: 35%;
 }
+
+.sale button,
+#wcollection button {
+  border: 2px solid black;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  background-color: #e691d4;
+}
+
 #message {
   padding: 60px;
   text-align: center;
@@ -203,6 +194,8 @@ h2 {
     text-align: center;
   }
 }
+
+/*About Us*/
 
 #contact{
   font-size: 15px;
@@ -500,7 +493,7 @@ main {
   flex: 1;
 }
 
-/*Login and*/
+/*Login and Register*/
 
 .register,
 .login {
