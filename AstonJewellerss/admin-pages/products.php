@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL ^ E_WARNING); 
+
 $conn = getDb();
 
 function getImageURL(string $type) {
@@ -39,7 +41,7 @@ function getImageURL(string $type) {
     }
 
     return $url;
-} 
+}
 
 // Check if post request was made to add new item
 if (isset($_POST['submit-product-form'])) {
@@ -67,6 +69,12 @@ if (isset($_POST['submit-product-form'])) {
         ':stock' => $_POST['product-stock'],
         ':sale' => $sale
     ]);
+
+    if (isset($_GET['edit'])) {
+        $delete = $conn->prepare("DELETE FROM product WHERE id=:id");
+        $delete->execute(['id' => $_GET['edit']]);
+        header("Location: admin.php?page=products");
+    }
 }
 
 // Get values for editing products table
@@ -74,7 +82,9 @@ $stat = $conn->prepare("SELECT id, name, price, type, image, `desc`, alt_text, s
 $stat->execute();
 $result = $stat->fetchAll(PDO::FETCH_ASSOC);
 
+
 // HTML frontend
+if (!isset($_GET['edit'])) {
 echo '
 
 <h1>Products</h1>
@@ -139,29 +149,81 @@ echo '
                         <th>Alt text</th>
                         <th>Stock</th>
                         <th>Sale?</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 <tbody> '?>
                     <?php foreach ($result as $row) { ?>
                     <tr id="<?php echo $row["id"]; ?>">
-                    <td contenteditable='true'><?php echo $row["id"]; ?></td>
-                    <td contenteditable='true'><?php echo $row["name"]; ?></td>
-                    <td contenteditable='true'><?php echo $row["price"]; ?></td>
-                    <td contenteditable='true'><?php echo $row["type"]; ?></td>
-                    <td contenteditable='true'><?php echo $row["image"]; ?></td>
-                    <td contenteditable='true'><?php echo $row["desc"]; ?></td>
-                    <td contenteditable='true'><?php echo $row["alt_text"]; ?></td>
-                    <td contenteditable='true'><?php echo $row["stock"]; ?></td>
-                    <td contenteditable='true'><?php echo $row["sale"]; ?></td>
+                    <td><?php echo $row["id"]; ?></td>
+                    <td><?php echo $row["name"]; ?></td>
+                    <td><?php echo $row["price"]; ?></td>
+                    <td><?php echo $row["type"]; ?></td>
+                    <td><?php echo $row["image"]; ?></td>
+                    <td><?php echo $row["desc"]; ?></td>
+                    <td><?php echo $row["alt_text"]; ?></td>
+                    <td><?php echo $row["stock"]; ?></td>
+                    <td><?php echo $row["sale"]; ?></td>
+                    <td><button id="edit" onclick="location.href='admin.php?page=products&edit=<?php echo $row["id"];?>'" type="button">Edit</button></td>
                     </tr>
                     <?php } echo '
                 </tbody>
             </table>
         </div>
     </div>
-    <button id="apply-edits" name="apply-edits">Apply changes</button>
     </li>
     </ul>
 </div>
 
-'?>
+'; } elseif (isset($_GET['edit'])) { 
+    
+    $stat = $conn->prepare("SELECT id, name, price, type, image, `desc`, alt_text, stock, sale FROM product WHERE id=:id");
+    $stat->execute(['id' => $_GET['edit']]);
+    $result = $stat->fetch(PDO::FETCH_ASSOC);
+    $desc = $result['desc'];
+
+    echo 
+    '
+    <ul class="flex cards">
+    <li>
+        <h2>Edit product</h2>
+        <form class="edit-product-form" action="#" method="post" enctype="multipart/form-data">';
+            echo "
+             <label for=\"product-name\">Name:</label>
+             <input type=\"text\" value=\"" . $result["name"] ."\" name=\"product-name\" id=\"product-name\" required>
+             <label for=\"product-price\">Price: (£)</label>
+             <input type=\"number\" value=\"" . $result["price"] ."\" step=\"0.01\" name=\"product-price\" id=\"product-price\" required>
+             <label for=\"product-stock\">Stock:</label>
+             <input type=\"number\" value=\"" . $result["stock"] ."\" name=\"product-stock\" id=\"product-stock\" required>
+             <label for=\"product-alt\" id=\"product-alt\">Alt-Text:</label>
+             <input type=\"text\" value=\"" . $result["alt_text"] ."\" name=\"product-alt\" id=\"product-alt\" required>
+
+            <label for=\"product-type\">Type:</label>
+            <select name=\"product-type\" id=\"product-type\">
+                <option value=\"women-bracelet\">Women&apos;s bracelet</option>
+                <option value=\"women-necklace\">Women&apos;s necklace</option>
+                <option value=\"women-earrings\">Women&apos;s earrings</option>
+                <option value=\"women-ring\">Women&apos;s ring</option>
+                <option value=\"women-watch\">Women&apos;s watch</option>
+                <option value=\"men-bracelet\">Men&apos;s bracelet</option>
+                <option value=\"men-chain\">Men&apos;s chain</option>
+                <option value=\"men-earrings\">Men&apos;s earrings</option>
+                <option value=\"men-ring\">Men&apos;s ring</option>
+                <option value=\"men-watch\">Men&apos;s watch</option>
+            </select>
+
+            <div id=\"desc-box\">
+                <label for=\"product-desc\">Description:</label>
+                <textarea name=\"product-desc\" id=\"product-desc\" required>$desc</textarea>
+                <label for=\"product-img\">Select image:</label>
+                <input type=\"file\" id=\"product-img\" name=\"product-img\" accept=\"image/*\" required>
+            </div>
+
+            <label for=\"product-sale\" id=\"product-sale\">Add to sale?:</label>
+            <input type=\"checkbox\" id=\"product-sale-chk\" name=\"product-sale-chk\" value=\"sale\">
+
+            <button id=\"submit-product-form\" name=\"submit-product-form\">Add product</button>
+      </form>
+    </li>
+    </ul>
+    "; } ?>
