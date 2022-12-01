@@ -278,6 +278,11 @@ td input{
   width: 1000px;
 }
 
+.basket-container{
+  position: relative;
+  min-height: 66vh;
+}
+
 /*Sales*/
 
 h3{
@@ -327,6 +332,14 @@ h3{
   text-align: center;
   margin: 0 auto;
   display: block;
+}
+
+.content h3{
+  font-size: 16px;
+}
+
+.content p{
+  font-size: 14px;
 }
 
 .zoom{

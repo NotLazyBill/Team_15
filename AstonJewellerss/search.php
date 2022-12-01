@@ -3,6 +3,19 @@
 include './functions.php';
 $conn = getDb();
 
+
+
+if (isset($_GET["q"])) {
+    $conn = getDb();
+    $stat = $conn->prepare("SELECT id, name, price, type, image, `desc`, alt_text FROM product WHERE name LIKE ?");
+    $qstring = $_GET["q"];
+    $stat->bindParam(1, $qstring, PDO::PARAM_STR);
+    $stat->execute();
+    $result = $stat->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stat->fetchAll();
+} else {
+    $result = array();
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,18 +37,6 @@ $conn = getDb();
             <br><br>
         </form>
         <?php
-
-            // Checks if the search is full or not
-            if (isset($_GET["q"])) {
-
-                $qstring = $_GET["q"];
-                $stat = $conn->prepare("SELECT * FROM product WHERE name LIKE '%$qstring%'");
-                $stat->execute();
-                $result = $stat->setFetchMode(PDO::FETCH_ASSOC);
-                $result = $stat->fetchAll();
-            } else {
-                $result = array();
-            }
 
             // Displays all products
             // NOTE: ADD PRODUCTS TO THE DB FIRST

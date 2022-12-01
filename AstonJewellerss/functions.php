@@ -68,7 +68,8 @@ function loadHeader()
         </div>
         <nav>
           <div class="topnav-right">
-            <!-- <a href="wishlist.php"><i class="fa fa-heart-o"></i></a> -->
+            <a href="userorder.php"><i class="fa fa-history"></i></a>
+            <a href="wishlist.php"><i class="fa fa-heart-o"></i></a>
             <a href="basket.php"><i class="fa fa-shopping-cart"></i></a>
           </div>
           <div id="topnav-centered">

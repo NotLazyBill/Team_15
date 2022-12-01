@@ -30,12 +30,12 @@ include './functions.php';
     <div class="sale">
       <img src="images/rings2.jpg" alt="wintercollection1" />
       <div class="centered">RINGS</div>
-      <div class="bottom-right"><a href="sales.php"><button class="btn">Shop Now</button></a></div>
+      <div class="bottom-right"><a href="shop-now.php"><button class="btn">Shop Now</button></a></div>
     </div>
     <div class="sale">
       <img src="images/bracelet.jpg" alt="wintercollection1" />
       <div class="centered">BRACELETS</div>
-      <div class="bottom-right"><a href="sales.php"><button class="btn">Shop Now</button></a></div>
+      <div class="bottom-right"><a href="shop-now.php"><button class="btn">Shop Now</button></a></div>
     </div>
   </section>
 
