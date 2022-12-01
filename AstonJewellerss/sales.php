@@ -22,12 +22,11 @@ $result = $stat->fetchAll(PDO::FETCH_ASSOC);
             foreach($result as $row) {
                 echo "<div class=\"content\">";
                 echo "<div class=\"zoom\">";
-                echo "<a href= view_product.php><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
+                echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></a>";
                 echo "</div>";
                 echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><h5>" . $row["name"] . "</h5></a>";
                 echo "<a href= \"view_product.php?id=" . $row["id"] . "\"><p>" . $row["type"] . "</p></a>";
                 echo "<h6>£" . $row["price"] . "</h6>";
-                echo "<button class=\"btn my-3\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button>";
                 echo "</div>";
             }
         ?>
