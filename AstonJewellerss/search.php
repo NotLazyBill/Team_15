@@ -8,7 +8,7 @@ $conn = getDb();
 if (isset($_GET["q"])) {
     $conn = getDb();
     $stat = $conn->prepare("SELECT id, name, price, type, image, `desc`, alt_text FROM product WHERE name LIKE ?");
-    $qstring = $_GET["q"];
+    $qstring = "%" . $_GET["q"] . "%";
     $stat->bindParam(1, $qstring, PDO::PARAM_STR);
     $stat->execute();
     $result = $stat->setFetchMode(PDO::FETCH_ASSOC);
