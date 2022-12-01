@@ -50,7 +50,7 @@ function loadHeader()
         <div class="container-fluid">
           <div>
             <a href="search.php"><i class="fa fa-search"></i> Search</a>
-            <?php if (isset($_SESSION['id'])) { ?>
+            <?php if (isset($_SESSION['admin'])) { ?>
               <a href="admin.php"><i class="fa-solid fa-user"></i> Admin</a>
             <?php } ?>
           </div>
