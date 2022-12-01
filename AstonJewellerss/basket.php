@@ -19,14 +19,14 @@ include './functions.php';
         <tr>
           <td><img src="images/rings.jpg" alt="Image"></td>
           <td>Golden Ring</td>
-          <td><input type="number" value="1"></td>
+          <td><input type="number" value="1" min="1"></td>
           <td>£59</td>
           <td><button type="submit" class="btn btn-danger my-3">Remove</button></td>
         </tr>
         <tr>
           <td><img src="images/rings2.jpg" alt="Image"></td>
           <td>Golden Ring</td>
-          <td><input type="number" value="1"></td>
+          <td><input type="number" value="1" min="1"></td>
           <td>£59</td>
           <td><button type="submit" class="btn btn-danger my-3">Remove</button></td>
         </tr>
