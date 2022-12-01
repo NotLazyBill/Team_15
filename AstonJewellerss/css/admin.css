@@ -212,3 +212,13 @@ body {
 #view {
   color: black;
 }
+
+.total-stats,
+.total-stats h3 {
+  margin: auto;
+  padding: 10px;
+}
+
+.order-table #table-wrapper {
+  height: 500px;
+}

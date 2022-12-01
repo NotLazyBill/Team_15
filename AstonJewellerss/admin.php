@@ -30,7 +30,6 @@ if (!$_SESSION['admin']) {
     <header><a>Admin</a></header>
     <ul class="nav">
       <li><a href="index.php"><i class="zmdi zmdi-home"></i>Home</a></li>
-      <li><a href="admin.php"><i class="zmdi zmdi-view-dashboard"></i>Dashboard</a></li>
       <li><a href="admin.php?page=products"><i class="zmdi zmdi-collection-plus"></i>Products</a></li>
       <li><a href="admin.php?page=orders"><i class="zmdi zmdi-shopping-basket"></i>Orders</a></li>
       <li><a href="admin.php?page=customers"><i class="zmdi zmdi-accounts-alt"></i>Customers</a></li>
@@ -51,8 +50,7 @@ if (!$_SESSION['admin']) {
     <div class="container-fluid">
       <!-- Load pages -->
       <?php
-      // Load dashboard 
-      if (!isset($_GET['page'])) { include './admin-pages/dashboard.php'; }
+      if (!isset($_GET['page'])) { header("Location: admin.php?page=products"); }
       else {
         $page = $_GET['page'];
 
