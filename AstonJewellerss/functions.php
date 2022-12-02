@@ -55,10 +55,11 @@ function loadHeader()
             <a href="admin.php"><i class="fa-solid fa-user"></i> Admin</a>
           <?php } ?>
         </div>
-        <div>
+         <div>
           <div class="image img">
-          <h1><img src="images/favicon.ico" alt="Site logo">Aston Jewellers </h1>
+          <img src="images/favicon.ico" alt="Site logo">
           </div>
+          <h1>Aston Jewellers </h1>
           <p>Selling high-quality affordable jewellery</p>
         </div>
         <div class="topnav-right">
