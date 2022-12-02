@@ -59,7 +59,6 @@ function loadHeader()
           <div class="image img">
           <h1><img src="images/favicon.ico" alt="Site logo">Aston Jewellers </h1>
           </div>
-          <h1>Aston Jewellers</h1>
           <p>Selling high-quality affordable jewellery</p>
         </div>
         <div class="topnav-right">
