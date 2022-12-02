@@ -6,7 +6,7 @@ include './functions.php';
 <html lang="en">
 <body>
 <?php loadHeader();?>
-
+<div class="c">
 <main>
   <div class="left">
     <section id="style">
@@ -55,7 +55,9 @@ include './functions.php';
     <h2>High-quality, Everyday Jewellery Made From Sustainable, Recycled Materials </h2>
   </section>
 </main>
-<?php loadFooter(); ?>
+<footer>
+    <?php loadFooter(); ?>
+</footer>
 </body>
 
 </html>
