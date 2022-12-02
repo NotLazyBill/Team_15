@@ -43,7 +43,7 @@ $id = (int)$_SESSION["id"];
           echo "<span class=\"price\">£" . $row["price"] . "</span> <br>";
           echo "<div class=\"buttons\">";
           echo "<form method=\"post\" action=\"wishlist.php?add=" . $row["id"] . "\"> <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"add\">Add to Basket <i class=\"fa fa-shopping-cart\"></i></button></form>";
-          echo "<form method=\"post\" action=\"wishlist.php?remove=" . $product["id"] . "\"> <button type=\"submit\" class=\"btn btn-danger my-3\" name=\"remove\"><i class=\"fa fa-heart-o\"></i></button></form>";
+          echo "<form method=\"post\" action=\"wishlist.php?remove=" . $product["id"] . "\"> <button type=\"submit\" class=\"btn btn-danger my-3\" name=\"remove\"><i class=\"fa fa-remove\"></i></button></form>";
           echo "</div>";
           echo "</div>";
           echo "</div>";
