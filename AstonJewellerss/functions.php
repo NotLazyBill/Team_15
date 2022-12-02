@@ -56,9 +56,6 @@ function loadHeader()
           <?php } ?>
         </div>
          <div>
-          <div class="image img">
-          <img src="images/favicon.ico" alt="Site logo">
-          </div>
           <h1>Aston Jewellers </h1>
           <p>Selling high-quality affordable jewellery</p>
         </div>
