@@ -57,7 +57,7 @@ function loadHeader()
         </div>
         <div>
           <div class="image img">
-          <img src="AJ.png" alt="Site logo">
+          <h1><img src="images/favicon.ico" alt="Site logo">Aston Jewellers </h1>
           </div>
           <h1>Aston Jewellers</h1>
           <p>Selling high-quality affordable jewellery</p>
