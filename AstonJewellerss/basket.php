@@ -8,10 +8,12 @@ if (!isset($_SESSION['id'])) {
   header("Location: login.php");
 }
 $id = (int)$_SESSION["id"];
+$total = 0;
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <body>
   <?php loadHeader(); ?>
   <main>
@@ -25,29 +27,80 @@ $id = (int)$_SESSION["id"];
           <th scope="col">Price</th>
           <th scope="col"></th>
         </tr>
-        <tr>
-          <td><img src="images/rings.jpg" alt="Image"></td>
-          <td>Golden Ring</td>
-          <td><input type="number" value="1"></td>
-          <td>£59</td>
-          <td><button type="submit" class="btn btn-danger my-3">Remove</button></td>
-        </tr>
-        <tr>
-          <td><img src="images/rings2.jpg" alt="Image"></td>
-          <td>Golden Ring</td>
-          <td><input type="number" value="1"></td>
-          <td>£59</td>
-          <td><button type="submit" class="btn btn-danger my-3">Remove</button></td>
-        </tr>
+
+        <?php
+        $stat = $conn->prepare("SELECT * FROM basket WHERE user_id=:id");
+        $stat->execute(['id' => $id]);
+        $result = $stat->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($result as $product) {
+          $stat = $conn->prepare("SELECT * FROM product WHERE id=:id");
+          $stat->execute(['id' => $product['product_id']]);
+          $resultx = $stat->fetchAll(PDO::FETCH_ASSOC);
+
+          foreach ($resultx as $row) {
+            echo "<tr>";
+            echo "<td><img src=\"" . $row["image"] . "\" alt=\"" . $row["alt_text"] . "\"></td>";
+            echo "<td>\"" . $row["name"] . "\"</td>";
+            echo "<td><input type=\"number\" value=\"" . $product["quantity"] . "\"></td>";
+            echo "<td>£" . $row["price"] . "</td>";
+            echo "<td><form action=\"basket.php?remove=" . $product["id"] . "\" method=\"post\"><button type=\"submit\" class=\"btn btn-danger my-3\">Remove</button></form></td>";
+            echo "</tr>";
+            $total = ($total + ($row["price"] * $product["quantity"]));
+          }
+        }
+
+        if (isset($_POST["add"])) {
+
+          foreach ($result as $product) {
+
+            $stat = $conn->prepare("SELECT price FROM product WHERE id=:id");
+            $stat->execute(['id' => $product['product_id']]);
+            $prod = $stat->fetch(PDO::FETCH_ASSOC);
+
+            $stat = $conn->prepare("INSERT INTO order_details(user_id, product_id, total)
+            VALUES(:user_id, :product_id, :total)");
+
+            $stat->execute([
+              ':user_id' => $id,
+              ':product_id' => $product["product_id"],
+              ':total' => $prod["price"],
+            ]);
+          }
+          $delete = $conn->prepare("DELETE FROM basket WHERE user_id=:id");
+          $delete->execute(['id' => $id]);
+          try {
+            header('Location: basket.php');
+          } catch (PDOexception $ex) {
+          }
+        }
+
+        if (isset($_GET["remove"])) {
+          echo $_GET["remove"];
+          $delete = $conn->prepare("DELETE FROM basket WHERE id=:id");
+          $delete->execute(['id' => $_GET["remove"]]);
+          try {
+            header('Location: basket.php');
+          } catch (PDOexception $ex) {
+          }
+        }
+
+        ?>
+
+
       </table>
 
       <div class="total-price">
 
         <table>
           <tr>
-            <td>Total</td>
-            <td>Price</td>
+            <td>Total Price</td>
           </tr>
+          <?php
+            echo "<tr>";
+            echo "<td>£$total</td>";
+            echo "<tr>";
+          ?>
         </table>
 
       </div>

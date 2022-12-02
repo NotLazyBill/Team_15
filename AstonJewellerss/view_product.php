@@ -40,6 +40,7 @@ $the_product = $result[0];
           echo "<span>£" . $the_product["price"] . "</span>"; ?>
           <div class="product-buttons">
             <form method="post" action="view_product.php?id=<?php echo $the_product["id"]; ?>&add=1"> <button type="submit" class="btn btn-warning my-3" name="basket">Add to Basket <i class="fa fa-shopping-cart"></i></button></form>
+            <form method="post" action="view_product.php?id=<?php echo $the_product["id"]; ?>&wish=1"> <button type="submit" class="btn btn-danger my-3" name="wishlist"><i class="fa fa-heart-o"></i></button></form>
           </div>
           <form class="back-btn">
             <button type="button" class="btn btn-success my-3" onclick="history.back()">Back</button>
@@ -55,8 +56,22 @@ $the_product = $result[0];
               ':total' => 1,
             ]);
 
-            header('Location: view_product.php?id='. $the_product["id"]);
+            header('Location: view_product.php?id=' . $the_product["id"]);
           }
+
+          if (isset($_GET["wish"])) {
+            $stat = $conn->prepare("INSERT INTO wishlist(user_id, product_id, quantity)
+            VALUES(:user_id, :product_id, :total)");
+
+            $stat->execute([
+              ':user_id' => $_SESSION["id"],
+              ':product_id' => $the_product["id"],
+              ':total' => 1,
+            ]);
+
+            header('Location: view_product.php?id=' . $the_product["id"]);
+          }
+
           ?>
         </div>
       </div>
