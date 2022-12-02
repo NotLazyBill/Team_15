@@ -36,6 +36,9 @@ if (isset($_POST['submit'])) {
 <body>
     <?php loadHeader(); ?>
     <div class="login">
+         <div class="image img">
+          <img src="images/favicon.ico" alt="Site logo">
+          </div>
         <h2>Log In!</h2> <br>
         <form action="login.php" method="post">
             <input type="text" name="username" placeholder="Username" /> <br><br>
